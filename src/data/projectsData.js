@@ -6,29 +6,27 @@ import six from '../assets/svg/projects/six.svg'
 export const projectsData = [
     {
         id: 1,
-        projectName: 'Ayla Networks',
-        projectDesc: 'This project about Simplifying the Development of Smart Home & IoT Solutions.',
-        tags: ['React', 'SAAS', 'React Bootstrap'],
+        projectName: 'AMN Phone',
+        projectDesc: 'developed together with a team an e-commerce page for a national cell phone sales company.',
+        tags: ['React', 'Tailwind', 'Javascript'],
         code: '',
-        demo: 'https://www.aylanetworks.com/',
+        demo: 'https://amnphone.com/',
         image: six
     },
     {
         id: 2,
-        projectName: 'Jewelry Niche',
-        projectDesc: 'This project is a Jewelry shop, Customer can be buy product and manage them and make payment.',
-        tags: ['React', 'Express', 'Material Ui'],
-        code: 'https://github.com/said7388/jewelry-niche',
-        demo: 'https://pandora-web.netlify.app/',
+        projectName: 'Pokemon API',
+        projectDesc: 'Project where requests are made to an external API, using different tools in the back and in the front',
+        tags: ['React', 'Express', 'Postgres', 'Sequelize', 'Redux'],
+        code: 'https://github.com/Andrewsando/PI-Pokemon-main',
         image: seven
     },
     {
         id: 3,
-        projectName: 'Travel Agency',
-        projectDesc: 'This project about travel agency management.',
-        tags: ['React', 'CSS', 'Material Ui'],
-        code: 'https://github.com/said7388/Travel-Agency-client',
-        demo: 'https://travel-agency-fc58b.web.app/',
+        projectName: 'Rick&Morti',
+        projectDesc: 'Development of a web application with only front design with information from the cartoon Rick and Morty.',
+        tags: ['React', 'CSS', 'Javascript'],
+        code: 'https://github.com/Andrewsando/Rick-and-Morty-Project',
         image: eight
     }
 ]

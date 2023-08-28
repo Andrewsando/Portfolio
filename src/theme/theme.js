@@ -4,7 +4,7 @@ import { contactsImage } from './images'
 export const theLightTheme = {
     type: 'light',
     primary: '#1D9BF0',
-    quaternary: '#EFF3F4',
+    quaternary: '#9CC2D4',
     quaternaryLight: '#F7F9F9',
     secondary: '#ffffff',
     tertiary: '#0f1419',
@@ -14,11 +14,11 @@ export const theLightTheme = {
 
 export const theDarkTheme = {
     type: 'dark',
-    primary: '#1D9BF0',
-    secondary: '#0F0C41',
-    quaternary: '#0C0B33',
-    quaternaryLight: '#8b98a5',
-    tertiary: '#EFF3F4',
-    buttonColor: '#8B98A5',
+    primary: '#83C8D1', //botones y subtitulos
+    secondary: '#042434', //fondo principal
+    quaternary: '#075061', //fondo de cartas y secundario
+    quaternaryLight: '#FFE3B3',
+    tertiary: '#BFDDDE', //letra
+    buttonColor: '#4097AA', //botones de contacto
     contactsimg: contactsImage
 }
