@@ -52,7 +52,7 @@
 
 .about-description > p {
   font-size: 1.25rem;
-  color: #e0d9d9;
+  color: white;
   font-family: var(--primaryFont);
 }
 

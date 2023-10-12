@@ -29,7 +29,7 @@ function LandingUI({ theme, drawerOpen, classes }) {
                             >
                                 <FaLinkedin
                                     className='landing--social linkedin-icon'
-                                    style={{ color: theme.primary }}
+                                    style={{ color: theme.secondary }}
                                     aria-label='LinkedIn'
                                 />
                             </a>
@@ -42,7 +42,7 @@ function LandingUI({ theme, drawerOpen, classes }) {
                             >
                                 <FaGithub
                                     className='landing--social'
-                                    style={{ color: theme.primary }}
+                                    style={{ color: theme.secondary }}
                                     aria-label='GitHub'
                                 />
                             </a>
@@ -108,28 +108,31 @@ function LandingUI({ theme, drawerOpen, classes }) {
                         <p>{headerData.desciption}</p>
 
                         <div className='lcr-buttonContainer'>
-                            {headerData.resumePdf && (
+                            {headerData.resumePdfEnglish && (
                                 <a
-                                    href={headerData.resumePdf}
-                                    download='resume'
+                                    href={headerData.resumePdfEnglish}
+                                    download='English resume'
                                     target='_blank'
                                     rel='noreferrer'
                                 >
                                     <button className={classes.resumeBtn}>
-                                        Download CV
+                                        Download <br/>English CV
                                     </button>
                                 </a>
                             )}
-                            <NavLink
-                                to='/#contacts'
-                                smooth={true}
-                                spy='true'
-                                duration={2000}
-                            >
-                                <button className={classes.contactBtn}>
-                                    Contact
-                                </button>
-                            </NavLink>
+                            {headerData.resumePdfSpanish && (
+                                <a
+                                    href={headerData.resumePdfSpanish}
+                                    download='Spanish resume'
+                                    target='_blank'
+                                    rel='noreferrer'
+                                >
+                                    <button className={classes.contactBtn}>
+                                        Download Spanish CV
+                                    </button>
+                                </a>
+                            )}
+                           
                         </div>
                     </div>
                 </div>

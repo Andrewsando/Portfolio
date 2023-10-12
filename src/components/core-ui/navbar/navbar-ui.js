@@ -16,7 +16,7 @@ function NavbarUI({ theme, shortname, classes, handleDrawerOpen, handleDrawerClo
     return (
         <div className='navbar'>
             <div className='navbar--container'>
-                <h1 style={{ color: theme.primary }}>
+                <h1 style={{ color: theme.secondary }}>
                     {shortname(headerData.name)}
                 </h1>
 

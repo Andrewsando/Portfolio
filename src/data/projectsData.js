@@ -1,25 +1,33 @@
-import eight from '../assets/svg/projects/eight.svg'
-import seven from '../assets/svg/projects/seven.svg'
-import six from '../assets/svg/projects/six.svg'
+
+
 
 
 export const projectsData = [
     {
         id: 1,
-        projectName: 'AMN Phone',
-        projectDesc: 'developed together with a team an e-commerce page for a national cell phone sales company.',
-        tags: ['React', 'Tailwind', 'Javascript'],
+        projectName: 'AMNPhone',
+        projectDesc: 'developed together with a team an e-commerce page for a Colombian cell phone sales company.',
+        tags: ['React', 'Tailwind', 'Javascript', 'Typescript', 'PostgreSQL','Redis', 'Gitlab'],
         code: '',
         demo: 'https://amnphone.com/',
-        image: six
+        
     },
     {
         id: 2,
-        projectName: 'Pokemon API',
-        projectDesc: 'Project where requests are made to an external API, using different tools in the back and in the front',
-        tags: ['React', 'Express', 'Postgres', 'Sequelize', 'Redux'],
+        projectName: 'AMBvalent',
+        projectDesc: 'PI developed, together with a team of developers, an e-commerce for sales of designs and clothing in the USA, it has not yet been refined',
+        tags: ['React', 'Node JS', 'Typescript', 'Medusa JS', 'etc'],
         code: 'https://github.com/Andrewsando/PI-Pokemon-main',
-        image: seven
+        
+    },
+    {
+        id: 3,
+        projectName: 'Spootchat',
+        projectDesc: 'Platform to listen to music online with the possibility of chatting with artists or others interested in music, created with a team of developers',
+        tags: ['React', 'Vercel', 'Vue', 'Firebase', 'etc'],
+        code: 'https://github.com/Andrewsando/PI-Pokemon-main',
+        demo: 'https://spoot-front.vercel.app/',
+       
     },
     {
         id: 3,
@@ -27,7 +35,7 @@ export const projectsData = [
         projectDesc: 'Development of a web application with only front design with information from the cartoon Rick and Morty.',
         tags: ['React', 'CSS', 'Javascript'],
         code: 'https://github.com/Andrewsando/Rick-and-Morty-Project',
-        image: eight
+        
     }
 ]
 
