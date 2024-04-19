@@ -5,6 +5,7 @@
   height: 30px;
   font-size: 3rem;
   z-index: 999;
+  display: none;
 }
 
 .changeTheme button {

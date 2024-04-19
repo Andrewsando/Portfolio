@@ -102,7 +102,7 @@ function LandingUI({ theme, drawerOpen, classes }) {
                             typeSpeed={40}
                             backSpeed={50}
                             className="typed-header"
-                            style={{ color: theme.primary, fontSize: '20px' }}
+                            style={{ color: theme.fifth, fontSize: '20px', fontWeight: '500' }}
                             loop
                         />
                         <p>{headerData.desciption}</p>

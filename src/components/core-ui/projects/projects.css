@@ -6,6 +6,7 @@
   min-height: fit-content;
   overflow-x: hidden;
   padding: 2rem;
+  padding-top: 0;
 }
 
 .projects--header {
