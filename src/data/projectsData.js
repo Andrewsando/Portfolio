@@ -1,23 +1,26 @@
-
+        import ambvalent from '../../src/assets/png/ambvalent.png'
+        import eventox from '../../src/assets/png/eventox.png'
+        import spootchat from '../../src/assets/png/spootchat.png'
 
 
 
 export const projectsData = [
     {
         id: 1,
-        projectName: 'AMNPhone',
-        projectDesc: 'developed together with a team an e-commerce page for a Colombian cell phone sales company.',
-        tags: ['React', 'Tailwind', 'Javascript', 'Typescript', 'PostgreSQL','Redis', 'Gitlab'],
+        projectName: 'EventoX',
+        projectDesc: 'Development of a marketplace for the sale of event tickets with Dashboards and notification systems.',
+        tags: ['React', 'Tailwind', 'Javascript', 'Typescript', 'PostgreSQL'],
         code: '',
-        demo: 'https://amnphone.com/',
-        
+        demo: '',
+        image: eventox,  
     },
     {
         id: 2,
-        projectName: 'AMBvalent',
+        projectName: 'Ambvalent',
         projectDesc: 'PI developed, together with a team of developers, an e-commerce for sales of designs and clothing in the USA, it has not yet been refined',
         tags: ['React', 'Node JS', 'Typescript', 'Medusa JS', 'etc'],
-        code: 'https://github.com/Andrewsando/PI-Pokemon-main',
+        code: "",
+        image: ambvalent,
         
     },
     {
@@ -25,17 +28,10 @@ export const projectsData = [
         projectName: 'Spootchat',
         projectDesc: 'Platform to listen to music online with the possibility of chatting with artists or others interested in music, created with a team of developers',
         tags: ['React', 'Vercel', 'Vue', 'Firebase', 'etc'],
-        code: 'https://github.com/Andrewsando/PI-Pokemon-main',
-        demo: 'https://spoot-front.vercel.app/',
+        code: '',
+        demo: '',
+        image: spootchat,
        
-    },
-    {
-        id: 3,
-        projectName: 'Rick&Morti',
-        projectDesc: 'Development of a web application with only front design with information from the cartoon Rick and Morty.',
-        tags: ['React', 'CSS', 'Javascript'],
-        code: 'https://github.com/Andrewsando/Rick-and-Morty-Project',
-        
     }
 ]
 

@@ -14,11 +14,12 @@ export const theLightTheme = {
 
 export const theDarkTheme = {
     type: 'dark',
-    primary: '#1a946f', //botones y subtitulos
-    secondary: '#1B2021', //fondo principal
-    quaternary: '#c09c73', //fondo de cartas y secundario
+    primary: '#cecfc9', //botones y subtitulos
+    secondary: '#0a3143', //fondo principal
+    quaternary: '#ddd0c8', //fondo de cartas y secundario
     quaternaryLight: '#FFE3B3',
-    tertiary: '#F5F4F4', //letra
+    tertiary: '#efefef', //letra
     buttonColor: '#4097AA', //botones de contacto
-    contactsimg: contactsImage
+    contactsimg: contactsImage,
+    fifth: "#4097AA"
 }
