@@ -6,5 +6,5 @@ export const aboutData = {
     description3: "I have always had a deep interest in problem solving and process optimization. I take pride in working in collaborative teams where I can bring my communication skills and ability to translate technical ideas into understandable concepts for non-technical people. Furthermore, I am a strong advocate of development best practices, computer security and scalability, which ensures that my creations are robust and reliable.",
 
 
-    description4:"In short, I am a dedicated, adaptable and curious software developer, constantly looking for ways to make the digital world a more functional and exciting place."
+    // description4:"In short, I am a dedicated, adaptable and curious software developer, constantly looking for ways to make the digital world a more functional and exciting place."
 }
