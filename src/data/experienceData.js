@@ -8,14 +8,14 @@ export const experienceData = [
     },
     {
         id: 2,
-        company: 'Ambvalent.com',
+        company: 'Ambvalent',
         jobtitle: 'Fullstack Developer (freelance)',
         startYear: 'May 2023',
         endYear: 'Present'
     },
     {
         id: 3,
-        company: 'AMNphone.com',
+        company: 'AMNphone',
         jobtitle: 'Fullstack developer (freelance)',
         startYear: 'Oct 2022',
         endYear: 'Apr 2023'

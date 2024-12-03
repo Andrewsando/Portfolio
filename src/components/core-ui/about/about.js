@@ -1,29 +1,22 @@
-import { Container } from '@mui/material';
 import React, { useContext } from 'react';
-import codings from '../../../assets/lottie/coding.json';
+import { Container } from '@mui/material';
 import { ThemeContext } from '../../../contexts/theme-context';
 import { aboutData } from '../../../data/aboutData';
-import AnimationLottie from '../../helper/animation-lottie';
 import './about.css';
+import { Link } from 'react-router-dom';
 
 function About() {
 
     const { theme } = useContext(ThemeContext);
     return (
-        <div style={{ backgroundColor: theme.secondary }}>
-            <Container className="about" id="about">
-                <div className="line-styling">
-                    <div className="style-circle" style={{ backgroundColor: theme.primary }}></div>
-                    <div className="style-circle" style={{ backgroundColor: theme.primary }}></div>
-                    <div className="style-line" style={{ backgroundColor: theme.primary }}></div>
-                </div>
+        <div id="about">
+            <Container className="about" >
                 <div className="about-body">
                     <div className="about-description">
-                        <h2 style={{ color: theme.primary }}>{aboutData.title}</h2>
-                        <p style={{ color: theme.tertiary }}>{aboutData.description1}<br /><br />{aboutData.description2}<br /><br />{aboutData.description3}<br /><br />{aboutData.description4}</p>
-                    </div>
-                    <div className="about-animation">
-                        <AnimationLottie animationPath={codings} />
+                        <h2 id="about" style={{ color: theme.primary }}>{aboutData.title}</h2>
+                        <p style={{ color: theme.septenary }}>{aboutData.description1}</p>
+                        <Link to="/resume" className="resumeLink">See resume <span className='aboutArrow'>→</span></Link>
+                        <Link to="/contact" className="resumeLink">Contact <span className='aboutArrow'>→</span></Link>
                     </div>
                 </div>
             </Container>

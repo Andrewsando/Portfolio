@@ -1,0 +1,60 @@
+ .contactContainer{
+    margin-bottom: 5px;
+    margin: 0 15px;
+    padding-top: 3rem;
+ }
+
+.container{
+    font-family: var(--primaryFont);
+    max-width: 985px;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.contactTitle{
+    font-family: var(--primaryFont);
+    color: #64748B;
+    justify-self: center;  
+    padding-bottom: 30px;  
+    padding-top: 50px;
+    font-size: 32px;
+}
+
+.container p {
+    font-size: 16px;
+    color: #334155;
+    margin-bottom: 20px;
+}
+
+.container h2 {
+    font-size: 20px;
+    color: #334155;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.container .inTouchText{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    margin-bottom: 30px;
+}
+
+.container a{
+    cursor: pointer;
+}
+
+@media (min-width: 601px) {
+    .contactContainer{
+        margin: 0 24px;
+     }
+}
+
+@media (min-width: 1200px) {
+    .contactContainer{
+        padding-top: 6rem;
+     }
+
+     .contactTitle{ 
+        padding-top: 50px;  
+    }
+}

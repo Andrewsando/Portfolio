@@ -8,23 +8,15 @@ function ThemeContextProvider(props) {
     // eslint-disable-next-line
     const [theme, setTheme] = useState(theDarkTheme);
     const [drawerOpen, setDrawerOpen] = useState(false);
-    const [isDark, setDark] = useState(true);
+
 
     const setHandleDrawer = () => {
         setDrawerOpen(!drawerOpen)
     }
 
-    const changeTheme = () => {
-        if (isDark) {
-            setTheme(theLightTheme);
-            setDark(false);
-        } else {
-            setTheme(theDarkTheme);
-            setDark(true);
-        }
-    }
 
-    const value = { theme, drawerOpen, setHandleDrawer, changeTheme, isDark }
+
+    const value = { theme, drawerOpen, setHandleDrawer }
     return (
         <ThemeContext.Provider value={value}>
             {props.children}

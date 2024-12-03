@@ -1,140 +1,27 @@
 
 import React from 'react';
-import { HashLink as NavLink } from 'react-router-hash-link';
-import Typed from 'react-typed';
 import { headerData } from '../../../data/headerData';
+import { Link } from 'react-router-dom';
+
 import './landing.css';
 
-import {
-    FaFacebook, FaGithub, FaLinkedin, FaTwitter
-} from 'react-icons/fa';
-import { contactsData } from '../../../data/contactsData';
-
-function LandingUI({ theme, drawerOpen, classes }) {
+function LandingUI({ theme }) {
 
 
     return (
-        <div className='landing' style={{ backgroundColor: theme.quaternary }}>
+        <div className='landing' style={{ backgroundColor: theme.secondary }}>
             <div className='landing--container'>
-                <div
-                    className='landing--container-left'
-                    style={{ backgroundColor: theme.quaternary }}
-                >
-                    <div className='lcl--content'>
-                        {contactsData.linkedIn && (
-                            <a
-                                href={contactsData.linkedIn}
-                                target='_blank'
-                                rel='noreferrer'
-                            >
-                                <FaLinkedin
-                                    className='landing--social linkedin-icon'
-                                    style={{ color: theme.secondary }}
-                                    aria-label='LinkedIn'
-                                />
-                            </a>
-                        )}
-                        {contactsData.github && (
-                            <a
-                                href={contactsData.github}
-                                target='_blank'
-                                rel='noreferrer'
-                            >
-                                <FaGithub
-                                    className='landing--social'
-                                    style={{ color: theme.secondary }}
-                                    aria-label='GitHub'
-                                />
-                            </a>
-                        )}
-                        {contactsData.twitter && (
-                            <a
-                                href={contactsData.twitter}
-                                target='_blank'
-                                rel='noreferrer'
-                            >
-                                <FaTwitter
-                                    className='landing--social twitter-icon'
-                                    style={{ color: theme.primary }}
-                                    aria-label='Twitter'
-                                />
-                            </a>
-                        )}
-                        {contactsData.facebook && (
-                            <a
-                                href={contactsData.facebook}
-                                target='_blank'
-                                rel='noreferrer'
-                            >
-                                <FaFacebook
-                                    className='landing--social facebook-icon'
-                                    style={{ color: theme.primary }}
-                                    aria-label='facebook'
-                                />
-                            </a>
-                        )}
-                    </div>
-                </div>
-                <img
-                    src={headerData.image}
-                    alt=''
-                    className='landing--img'
-                    style={{
-                        opacity: `${drawerOpen ? '0' : '1'}`,
-                        borderColor: theme.primary,
-                    }}
-                />
-                <div
-                    className='landing--container-right'
-                    style={{ backgroundColor: theme.secondary }}
-                >
+                <div>
                     <div
                         className='lcr--content'
-                        style={{ color: theme.tertiary }}
+                        style={{ color: theme.quinary }}
                     >
-                        {/* <h6 style={{ color: theme.primary }}>{headerData.title}</h6> */}
-                        <h1>{headerData.name}</h1>
-                        <Typed
-                            strings={[
-                                'Backend Developer',
-                                'Frontend Developer',
-                                'Fullstack Developer']}
-                            typeSpeed={40}
-                            backSpeed={50}
-                            className="typed-header"
-                            style={{ color: theme.fifth, fontSize: '20px', fontWeight: '500' }}
-                            loop
-                        />
-                        <p>{headerData.desciption}</p>
-
-                        <div className='lcr-buttonContainer'>
-                            {headerData.resumePdfEnglish && (
-                                <a
-                                    href={headerData.resumePdfEnglish}
-                                    download='English resume'
-                                    target='_blank'
-                                    rel='noreferrer'
-                                >
-                                    <button className={classes.resumeBtn}>
-                                        Download <br/>English CV
-                                    </button>
-                                </a>
-                            )}
-                            {headerData.resumePdfSpanish && (
-                                <a
-                                    href={headerData.resumePdfSpanish}
-                                    download='Spanish resume'
-                                    target='_blank'
-                                    rel='noreferrer'
-                                >
-                                    <button className={classes.contactBtn}>
-                                        Download Spanish CV
-                                    </button>
-                                </a>
-                            )}
-                           
-                        </div>
+                        <Link to="/">
+                            <h1>{headerData.name}<span className='lastname'> {headerData.lastname}</span></h1>
+                        </Link>
+                        <p>{headerData.description}</p>
                     </div>
+
                 </div>
             </div>
         </div>

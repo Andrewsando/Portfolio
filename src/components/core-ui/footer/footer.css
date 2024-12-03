@@ -1,0 +1,43 @@
+.footerContainer {
+    max-width: 985px;
+    width: 100%;
+    justify-self: center;
+    padding-bottom: 20px;
+    font-family: var(--primaryFont);
+    padding-top: 0;
+}
+
+.footerContainer>hr {
+    color: #334155;
+    width: 100%;
+}
+
+.textContainer>p:first-of-type {
+    color: #334155;
+    font-size: 12px;
+}
+
+.textContainer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 10px;
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: 500;
+}
+.link-container{
+    gap: 10px;
+    display: flex;
+}
+
+.contactCTA {
+    color: #64748B;
+    font-size: 12px;
+}
+
+@media (min-width: 601px) {
+    .footerContainer {
+        width: 100%;
+    } 
+}

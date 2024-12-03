@@ -15,8 +15,8 @@
 │   ├── App.js
 │   ├── assets
 │   │   ├── fonts
-│   │   │   └── Bestermind
-│   │   │       └── BestermindRegular.ttf
+│   │   │   └── Garet-Book
+│   │   │       └── Garet-Book.ttf
 │   │   ├── lottie
 │   │   │   └── coding.json
 │   │   │   └── development.json
@@ -36,12 +36,6 @@
 │   │   ├── BackToTop
 │   │   │   ├── BackToTop.css
 │   │   │   └── BackToTop.js
-│   │   ├── Blog
-│   │   │   ├── Blog.css
-│   │   │   ├── Blog.js
-│   │   │   └── SingleBlog
-│   │   │       ├── SingleBlog.css
-│   │   │       └── SingleBlog.js
 │   │   ├── Contacts
 │   │   │   ├── Contacts.css
 │   │   │   └── Contacts.js
@@ -74,7 +68,6 @@
 │   │   └── ThemeContext.js
 │   ├── data
 │   │   ├── aboutData.js
-│   │   ├── blogData.js
 │   │   ├── contactsData.js
 │   │   ├── educationData.js
 │   │   ├── experienceData.js
@@ -86,9 +79,6 @@
 │   ├── index.css
 │   ├── index.js
 │   ├── pages
-│   │   ├── Blog
-│   │   │   ├── BlogPage.css
-│   │   │   └── Index.js
 │   │   ├── Home
 │   │   │   └── Index.js
 │   │   ├── Project
