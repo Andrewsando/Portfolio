@@ -1,7 +1,5 @@
 import React from 'react';
-import ProjectsUI from '../core-ui/projects/projects-ui.js';
-
-
+import ProjectsUI from '../core-ui/projects/projects-ui';
 
 function Projects() {
 
