@@ -1,6 +1,7 @@
 import ambvalent from '../../src/assets/png/ambvalent.png'
 import eventox from '../../src/assets/png/eventox.png'
 import spootchat from '../../src/assets/png/spootchat.png'
+import gaming from '../../src/assets/png/gaming.png'
 
 
 
@@ -34,7 +35,7 @@ export const projectsData = [
         projectName: 'Gaming',
         description: 'E-commerce platform for purchasing video games',
         tags: ['React', 'Vercel', 'Vue', 'Firebase', 'etc'],
-        image: spootchat,
+        image: gaming,
         link: "https://gaming-ecommerce.netlify.app/"
     }
 ]
