@@ -2,14 +2,14 @@ export const experienceData = [
         {
         id: 1,
         company: 'Publicis Global Delivery',
-        jobtitle: 'Experience Technology Engineer',
+        jobtitle: 'Experience Technology Engineer (Developer)',
         startYear: 'Jul 2025',
         endYear: 'Present'
     },
     {
         id: 2,
         company: 'Publicis Global Delivery',
-        jobtitle: 'Junior Experience Technology Engineer',
+        jobtitle: 'Junior Experience Technology Engineer (Developer)',
         startYear: 'Nov 2023',
         endYear: 'Present'
     },
