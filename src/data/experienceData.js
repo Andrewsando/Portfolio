@@ -22,23 +22,16 @@ export const experienceData = [
     },
     {
         id: 4,
-        company: 'AMNphone',
-        jobtitle: 'Fullstack developer (freelance)',
-        startYear: 'Oct 2022',
-        endYear: 'Apr 2023'
-    },
-    {
-        id: 5,
         company: 'Aruna Asesores SAS',
         jobtitle: 'Corporate website development and maintenance',
         startYear: 'Oct 2021',
         endYear: 'Feb 2023'
     },
     {
-        id: 6,
+        id: 5,
         company: 'Aruna Asesores SAS',
         jobtitle: 'Head of administrative division and quality',
         startYear: 'Jan 2020',
         endYear: 'Feb 2023'
-    },
+    }
 ]
