@@ -25,6 +25,14 @@ html {
   width: min(300px, calc(100vw - 32px));
 }
 
+.lcr--navbar.open .navbarHeader {
+  padding: 0;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  z-index: 1;
+}
+
 .lcr--navbar.scrolled {
   background-color: transparent;
 }
@@ -75,11 +83,14 @@ html {
 }
 
 .lcr--navbar.open ul {
-  border-top: 1px solid rgba(148, 163, 184, .2);
   max-height: 320px;
   opacity: 1;
-  padding: 8px 10px 10px;
+  padding: 6px 10px 10px;
   visibility: visible;
+}
+
+.lcr--navbar.open li:first-child a {
+  padding-right: 54px;
 }
 
 .lcr--navbar ul a {
