@@ -9,7 +9,7 @@ function LandingUI({ theme }) {
 
 
     return (
-        <div className='landing' style={{ backgroundColor: theme.secondary }}>
+        <div className='landing'>
             <div className='landing--container'>
                 <div>
                     <div

@@ -9,7 +9,7 @@ function Education() {
 
     const { theme } = useContext(ThemeContext);
     return (
-        <div style={{ backgroundColor: theme.secondary }}>
+        <div>
             <Container className="education">
                 <div className="education-body">
                     <div className="education-description">

@@ -9,7 +9,7 @@ function Experience() {
 
     const { theme } = useContext(ThemeContext);
     return (
-        <div style={{ backgroundColor: theme.secondary }}>
+        <div>
             <Container className="experience">
                 <div className="experience-body">
                     <div className="experience-description">
