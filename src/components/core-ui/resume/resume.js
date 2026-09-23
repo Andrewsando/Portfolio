@@ -9,15 +9,15 @@ export default function ResumeUI() {
         <div>
             <h1 className='resumeTitle'>Resume</h1>
             <img
-                src="/HV-English.webp"
+                src="/Andres-Torres-Frontend-Developer-Resume.webp"
                 alt="Andres Torres resume preview"
                 className='resumeImg'
                 loading="lazy"
                 decoding="async"
             />
             <a
-                href="/HV-English.pdf"
-                download="Andres Torres - Resume.pdf"
+                href="/Andres-Torres-Frontend-Developer-Resume.pdf"
+                download="Andres Torres - Frontend Developer Resume.pdf"
                 className='button'
             >
                 Download Resume <span className='arrow'>→</span>
