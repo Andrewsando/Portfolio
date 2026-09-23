@@ -6,8 +6,8 @@ export const experienceData = [
         startYear: 'Jul 2025',
         endYear: 'Present',
         achievements: [
-            'Build accessible, responsive interfaces with React, TypeScript, Tailwind CSS, and Styled Components.',
-            'Create reusable components and optimize frontend performance and AEM authoring workflows.'
+            'Create modern, accessible, and responsive interfaces with React, TypeScript, Tailwind CSS, and Styled Components.',
+            'Build reusable components, optimize frontend performance, and keep AEM authoring workflows fluid and intuitive.'
         ]
     },
     {
@@ -17,8 +17,8 @@ export const experienceData = [
         startYear: 'Nov 2023',
         endYear: 'Jun 2025',
         achievements: [
-            'Collaborated with design, QA, Product, and DevOps teams to deliver scalable products aligned with business objectives.',
-            'Diagnosed and resolved technical issues affecting usability, reliability, and page performance.'
+            'Collaborated with designers, QA, Product Owners, and DevOps teams to deliver robust, scalable products aligned with business objectives.',
+            'Identified and resolved technical problems affecting the user experience and product performance.'
         ]
     },
     {
@@ -28,8 +28,8 @@ export const experienceData = [
         startYear: 'May 2023',
         endYear: 'Oct 2023',
         achievements: [
-            'Developed responsive web experiences and reusable interfaces focused on clarity, usability, and performance.',
-            'Translated business requirements into maintainable frontend solutions across desktop and mobile devices.'
+            'Developed advanced marketplace features including search, product filtering, personalized recommendations, and inventory management.',
+            'Ensured the marketplace was fully responsive and displayed correctly across mobile and desktop devices.'
         ]
     },
     {
@@ -39,19 +39,19 @@ export const experienceData = [
         startYear: 'Oct 2021',
         endYear: 'Feb 2023',
         achievements: [
-            'Led the design and development of corporate websites with intuitive, responsive user experiences.',
-            'Managed maintenance, content updates, performance improvements, and website security.'
+            'Led the design and development of corporate websites, ensuring an intuitive and functional user experience.',
+            'Managed website maintenance and periodic updates, ensuring correct operation and security.'
         ]
     },
     {
         id: 5,
         company: 'Aruna Asesores SAS',
         jobtitle: 'Head of administrative division and quality',
-        startYear: 'Jan 2020',
+        startYear: 'Jun 2020',
         endYear: 'Feb 2023',
         achievements: [
-            'Led quality-management initiatives based on ISO 9001, improving internal processes and regulatory compliance.',
-            'Identified and mitigated administrative and quality risks to support business continuity.'
+            'Led the implementation of systems such as ISO 9001, ensuring regulatory compliance and improving internal process quality.',
+            'Identified, evaluated, and mitigated administrative and quality risks to ensure business continuity.'
         ]
     }
 ]

@@ -68,5 +68,6 @@
   .about-description>p {
     font-size: 1.25rem;
     font-family: var(--primaryFont);
+    line-height: 1.65;
   }
 }

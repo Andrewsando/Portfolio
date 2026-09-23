@@ -6,15 +6,19 @@ html {
   background-color: rgba(255, 255, 255, .88);
   backdrop-filter: blur(12px);
   border: 1px solid rgba(203, 213, 225, .8);
-  border-radius: 20px;
+  border-radius: 16px;
   box-shadow: 0 8px 24px rgba(15, 23, 42, .08);
-  left: 50%;
+  left: auto;
   position: fixed;
-  top: 20px;
-  transform: translateX(-50%);
-  transition: background-color .3s, box-shadow .3s;
-  width: calc(100% - 32px);
+  right: 16px;
+  top: 16px;
+  transition: background-color .3s, box-shadow .3s, width .3s ease-in-out;
+  width: auto;
   z-index: 1000;
+}
+
+.lcr--navbar.open {
+  width: min(300px, calc(100% - 32px));
 }
 
 .lcr--navbar.scrolled {
@@ -28,24 +32,39 @@ html {
   border: 0;
   display: flex;
   flex-direction: row;
+  gap: 8px;
   font-family: var(--primaryFont);
   font-size: 14px;
   font-weight: 600;
   justify-content: space-between;
-  padding: 14px 16px;
+  min-height: 44px;
+  padding: 10px 14px;
   width: 100%;
 }
 
+.navbarToggle svg {
+  flex-shrink: 0;
+  font-size: 22px;
+}
+
 .lcr--navbar ul {
-  display: none;
+  display: flex;
   flex-direction: column;
   font-family: var(--primaryFont);
   gap: 4px;
-  padding: 0 12px 14px;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0 10px;
+  transition: max-height .3s ease-in-out, opacity .2s ease-in-out, padding .3s ease-in-out;
+  visibility: hidden;
 }
 
 .lcr--navbar.open ul {
-  display: flex;
+  max-height: 320px;
+  opacity: 1;
+  padding: 2px 10px 10px;
+  visibility: visible;
 }
 
 .lcr--navbar ul a {
@@ -53,7 +72,7 @@ html {
   color: #334155;
   display: block;
   font-size: 14px;
-  padding: 10px 12px;
+  padding: 11px 12px;
   text-decoration: none;
   transition: background-color .2s, color .2s;
 }
@@ -68,13 +87,16 @@ html {
   list-style-type: none;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 985px) {
   .lcr--navbar {
     background: transparent;
     border-color: transparent;
     border-radius: 1000px;
     box-shadow: none;
-    top: 70px;
+    left: 50%;
+    right: auto;
+    top: 24px;
+    transform: translateX(-50%);
     width: auto;
   }
 
@@ -88,23 +110,22 @@ html {
     flex-direction: row;
     gap: 30px;
     justify-content: center;
+    max-height: none;
+    opacity: 1;
+    overflow: visible;
     padding: 10px 20px;
+    visibility: visible;
     white-space: nowrap;
-  }
-}
-
-@media (min-width: 985px) {
-  .lcr--navbar {
-    top: 120px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .lcr--navbar {
-    top: 50px;
   }
 
   .lcr--navbar ul a {
     font-size: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lcr--navbar,
+  .lcr--navbar ul {
+    transition: none;
   }
 }

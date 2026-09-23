@@ -131,20 +131,23 @@
   }
 
   .education-card {
-    height: 140px;
+    height: 120px;
     width: 90%;
   }
 
   .education-details>h6 {
-    font-size: 16px;
+    font-size: 14px;
+    line-height: 1.5;
   }
 
   .education-details>h4 {
-    font-size: 20px;
+    font-size: 18px;
+    line-height: 1.4;
   }
 
   .education-details>h5 {
-    font-size: 18px;
+    font-size: 15px;
+    line-height: 1.55;
   }
 
   .education-description {

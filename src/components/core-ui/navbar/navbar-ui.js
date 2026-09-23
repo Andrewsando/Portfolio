@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { IoCloseOutline, IoMenuOutline } from 'react-icons/io5';
 import './navbar.css';
 
 const navItems = [
@@ -47,7 +48,8 @@ function NavbarUI() {
         aria-controls="primary-navigation"
         onClick={() => setIsOpen((open) => !open)}
       >
-        <span>{isOpen ? 'Close menu' : 'Menu'}</span>
+        <span>{isOpen ? 'Close' : 'Menu'}</span>
+        {isOpen ? <IoCloseOutline aria-hidden="true" /> : <IoMenuOutline aria-hidden="true" />}
       </button>
       <ul id="primary-navigation">
         {navItems.map(({ id, label }) => (
