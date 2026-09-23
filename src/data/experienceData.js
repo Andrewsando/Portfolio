@@ -1,20 +1,30 @@
 export const experienceData = [
-        {
+    {
         id: 1,
-        company: 'Publicis Global Delivery',
-        jobtitle: 'Experience Technology Engineer (Frontend Developer)',
-        startYear: 'Jul 2025',
+        company: 'Publicis Production · Publicis Global Delivery',
+        jobtitle: 'Frontend Developer',
+        startYear: 'Jan 2026',
         endYear: 'Present',
         achievements: [
-            'Earned an accelerated promotion ahead of the company’s standard progression timeline by consistently exceeding leadership expectations and demonstrating strong technical growth.',
-            'Enhance complex Adobe Experience Manager implementations, including Forms and Experience Fragments, to support evolving business and authoring requirements.',
-            'Use eDAM to organize and manage digital assets, helping maintain accurate, consistent, and efficient content delivery across web pages.',
-            'Collaborate on the development and continuous improvement of production websites, ensuring reliable functionality, visual consistency, and responsive behavior.',
-            'Apply the frontend and cross-functional experience gained in the previous role to deliver accessible, reusable interfaces with React and Styled Components.'
+            'Contribute to Publicis Production’s global creative production network, connecting frontend engineering, content, and technology to deliver scalable digital experiences for international brands.',
+            'Enhance complex Adobe Experience Manager solutions, including AEM Forms and Experience Fragments, to support efficient and adaptable content production.',
+            'Use eDAM to organize and manage digital assets, helping teams deliver accurate and consistent content across web experiences.',
+            'Develop and continuously improve responsive production websites with React and Styled Components, ensuring reliable functionality, visual consistency, and release quality.'
         ]
     },
     {
         id: 2,
+        company: 'Publicis Global Delivery',
+        jobtitle: 'Experience Technology Engineer (Frontend Developer)',
+        startYear: 'Jul 2025',
+        endYear: 'Dec 2025',
+        achievements: [
+            'Earned an accelerated promotion ahead of the company’s standard progression timeline by consistently exceeding leadership expectations and demonstrating strong technical growth.',
+            'Expanded frontend responsibilities by delivering responsive AEM pages and reusable components while collaborating with Technology Managers and QA to maintain release quality.'
+        ]
+    },
+    {
+        id: 3,
         company: 'Publicis Global Delivery',
         jobtitle: 'Junior Experience Technology Engineer (Frontend Developer)',
         startYear: 'Nov 2023',
@@ -28,7 +38,7 @@ export const experienceData = [
         ]
     },
     {
-        id: 3,
+        id: 4,
         company: 'Ambvalent',
         jobtitle: 'Frontend Developer',
         startYear: 'May 2023',
@@ -43,7 +53,7 @@ export const experienceData = [
         ]
     },
     {
-        id: 4,
+        id: 5,
         company: 'Aruna Asesores SAS',
         jobtitle: 'Corporate website development and maintenance',
         startYear: 'Oct 2021',
@@ -56,7 +66,7 @@ export const experienceData = [
         ]
     },
     {
-        id: 5,
+        id: 6,
         company: 'Aruna Asesores SAS',
         jobtitle: 'Head of administrative division and quality',
         startYear: 'Jun 2020',
