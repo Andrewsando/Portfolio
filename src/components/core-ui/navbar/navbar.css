@@ -135,6 +135,13 @@ html {
     width: auto;
   }
 
+  .lcr--navbar.scrolled {
+    backdrop-filter: blur(12px) saturate(140%);
+    background-color: rgba(255, 255, 255, .9);
+    border-color: rgba(203, 213, 225, .62);
+    box-shadow: 0 12px 30px rgba(15, 23, 42, .12);
+  }
+
   .navbarToggle {
     display: none;
   }
