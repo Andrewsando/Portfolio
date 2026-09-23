@@ -50,8 +50,13 @@ export const experienceData = [
         startYear: 'Jun 2020',
         endYear: 'Feb 2023',
         achievements: [
-            'Led the implementation of systems such as ISO 9001, ensuring regulatory compliance and improving internal process quality.',
-            'Identified, evaluated, and mitigated administrative and quality risks to ensure business continuity.'
+            'Brought accounts receivable and payable records up to date by reconciling debtor balances and supplier payments, reducing financial exposure and improving cash-flow visibility.',
+            'Directed administrative operations for ArunaMex, the company’s Mexico branch, ensuring continuity, control, and the correct execution of day-to-day processes.',
+            'Designed operational KPIs to measure internal performance, improve management visibility, and support data-driven decision-making.',
+            'Managed operational relationships with international clients, coordinating requirements and maintaining reliable service continuity.',
+            'Monitored regulatory filings and procedures with INVIMA, supporting timely completion and ongoing compliance.',
+            'Standardized and documented administrative workflows, leaving an organized and sustainable operating structure.',
+            'Led ISO 9001 implementation, strengthening process quality, regulatory alignment, and business continuity.'
         ]
     }
 ]
