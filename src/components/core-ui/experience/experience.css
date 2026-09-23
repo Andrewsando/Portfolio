@@ -26,8 +26,6 @@
   background-color: #F1F5F9;
   border-radius: 20px;
   margin-bottom: 1.5rem;
-  overflow: hidden;
-  transition: 400ms ease-in-out;
   width: 100%;
 }
 
@@ -44,9 +42,10 @@
   min-height: 100px;
   padding: 1rem;
   text-align: left;
+  transition: 400ms ease-in-out;
 }
 
-.experience-entry:hover {
+.experience-card:hover {
   background-color: rgba(226, 232, 240, .7);
   transform: scale(1.02);
   transition: 400ms ease-in-out;
@@ -125,12 +124,12 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .experience-entry,
+  .experience-card,
   .experience-chevron {
     transition: none;
   }
 
-  .experience-entry:hover {
+  .experience-card:hover {
     transform: none;
   }
 }
