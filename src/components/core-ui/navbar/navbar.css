@@ -3,91 +3,62 @@ html {
 }
 
 .lcr--navbar {
-  background-color: rgba(248, 250, 252, .58);
-  backdrop-filter: blur(18px) saturate(145%);
-  border: 1px solid rgba(255, 255, 255, .72);
+  background-color: transparent;
+  border: 1px solid transparent;
   border-radius: 18px;
-  box-shadow: 0 10px 30px rgba(30, 41, 59, .09);
-  left: 50%;
-  max-width: 680px;
+  left: auto;
+  max-width: none;
   position: fixed;
-  right: auto;
+  right: 16px;
   top: 16px;
-  transform: translateX(-50%);
+  transform: none;
   transition: background-color .3s, box-shadow .3s;
-  width: calc(100% - 32px);
+  width: auto;
   z-index: 1000;
 }
 
 .lcr--navbar.open {
-  background-color: rgba(248, 250, 252, .78);
+  backdrop-filter: blur(18px) saturate(145%);
+  background-color: rgba(248, 250, 252, .76);
+  border-color: rgba(255, 255, 255, .72);
+  box-shadow: 0 12px 32px rgba(30, 41, 59, .12);
+  width: min(300px, calc(100vw - 32px));
 }
 
 .lcr--navbar.scrolled {
-  background-color: rgba(248, 250, 252, .72);
-  box-shadow: 0 12px 32px rgba(30, 41, 59, .12);
+  background-color: transparent;
 }
 
 .navbarHeader {
   align-items: center;
   display: flex;
-  justify-content: space-between;
-  padding: 7px;
-}
-
-.navbarBrand {
-  align-items: center;
-  color: #1e293b;
-  display: flex;
-  font-family: var(--primaryFont);
-  font-size: 14px;
-  font-weight: 600;
-  gap: 10px;
-  letter-spacing: -.01em;
-  text-decoration: none;
-}
-
-.navbarMonogram {
-  align-items: center;
-  background: linear-gradient(135deg, rgba(15, 12, 41, .95), rgba(48, 43, 99, .88));
-  border: 1px solid rgba(255, 255, 255, .7);
-  border-radius: 12px;
-  box-shadow: 0 5px 14px rgba(30, 41, 59, .18);
-  color: #fff;
-  display: flex;
-  font-size: 12px;
-  height: 36px;
-  justify-content: center;
-  letter-spacing: .04em;
-  width: 36px;
+  justify-content: flex-end;
+  padding: 4px;
 }
 
 .navbarToggle {
   align-items: center;
-  background: transparent;
-  border: 0;
+  backdrop-filter: blur(14px);
+  background-color: rgba(248, 250, 252, .62);
+  border: 1px solid rgba(255, 255, 255, .78);
+  border-radius: 14px;
+  box-shadow: 0 8px 22px rgba(30, 41, 59, .1);
   display: flex;
-  flex-direction: row;
-  gap: 8px;
-  font-family: var(--primaryFont);
-  font-size: 14px;
-  font-weight: 600;
-  justify-content: space-between;
-  min-height: 38px;
-  padding: 8px 10px 8px 12px;
-  width: auto;
+  height: 46px;
+  justify-content: center;
+  padding: 0;
+  width: 46px;
 }
 
 .navbarToggle:hover,
 .navbarToggle:focus-visible {
-  background-color: rgba(255, 255, 255, .5);
-  border-radius: 11px;
+  background-color: rgba(255, 255, 255, .78);
   outline: none;
 }
 
 .navbarToggle svg {
   flex-shrink: 0;
-  font-size: 22px;
+  font-size: 25px;
 }
 
 .lcr--navbar ul {
