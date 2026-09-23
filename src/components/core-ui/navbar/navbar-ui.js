@@ -49,7 +49,7 @@ function NavbarUI() {
           onClick={(event) => handleNavigation(event, 'top')}
         >
           <span className="navbarMonogram" aria-hidden="true">AT</span>
-          <span>Andrés Torres</span>
+          <span>Portfolio</span>
         </a>
         <button
           type="button"
