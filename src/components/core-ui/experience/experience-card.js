@@ -12,10 +12,7 @@ function ExperienceCard({ id, company, jobtitle, startYear, endYear, achievement
 
     return (
         <Fade bottom>
-            <article
-                className={`experience-entry${isExpanded ? ' expanded' : ''}`}
-                style={{ backgroundColor: theme.quaternary }}
-            >
+            <article className={`experience-entry${isExpanded ? ' expanded' : ''}`}>
                 <button
                     type="button"
                     className="experience-card"

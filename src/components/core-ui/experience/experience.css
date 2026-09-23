@@ -23,15 +23,11 @@
 }
 
 .experience-entry {
-  border: 1px solid transparent;
+  background-color: #F1F5F9;
   border-radius: 20px;
   margin-bottom: 1.5rem;
   overflow: hidden;
-  transition:
-    background-color 200ms ease-in-out,
-    border-color 200ms ease-in-out,
-    box-shadow 200ms ease-in-out,
-    transform 200ms ease-in-out;
+  transition: 400ms ease-in-out;
   width: 100%;
 }
 
@@ -52,18 +48,12 @@
 
 .experience-entry:hover {
   background-color: rgba(226, 232, 240, .7);
-  border-color: #cbd5e1;
-  box-shadow: 0 12px 24px rgba(15, 23, 42, .08);
-  transform: translateY(-3px);
+  transform: scale(1.02);
+  transition: 400ms ease-in-out;
 }
 
 .experience-entry.expanded {
-  border-color: #94a3b8;
-  box-shadow: 0 14px 28px rgba(15, 23, 42, .1);
-}
-
-.experience-entry:active {
-  transform: translateY(-1px) scale(.995);
+  background-color: rgba(226, 232, 240, .7);
 }
 
 .experience-card:focus-visible {
@@ -140,8 +130,7 @@
     transition: none;
   }
 
-  .experience-entry:hover,
-  .experience-entry:active {
+  .experience-entry:hover {
     transform: none;
   }
 }
