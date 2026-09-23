@@ -39,8 +39,10 @@ export const experienceData = [
         startYear: 'Oct 2021',
         endYear: 'Feb 2023',
         achievements: [
-            'Led the design and development of corporate websites, ensuring an intuitive and functional user experience.',
-            'Managed website maintenance and periodic updates, ensuring correct operation and security.'
+            'Delivered a digital brand refresh across the corporate website and social media channels, strengthening consistency and the company’s professional online presence.',
+            'Coordinated cross-functional collaboration to design and launch a corporate website that addressed the company’s operational and communication requirements.',
+            'Established the website as a direct communication channel for clients and stakeholders, improving access to company information and inquiries.',
+            'Managed ongoing website maintenance, content updates, reliable operation, and security.'
         ]
     },
     {
