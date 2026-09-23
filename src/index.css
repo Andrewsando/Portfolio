@@ -12,6 +12,22 @@
   box-sizing: border-box;
 }
 
+html,
+body,
+#root {
+  min-height: 100%;
+  overscroll-behavior-y: none;
+}
+
+html {
+  background-color: #f8fafc;
+}
+
+body,
+#root {
+  overflow-x: hidden;
+}
+
 a {
   text-decoration: none;
 }
