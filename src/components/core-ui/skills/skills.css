@@ -76,25 +76,13 @@
 }
 
 .skillCategory > h3 {
-  align-items: center;
-  display: flex;
   font-family: var(--primaryFont);
   font-size: 18px;
   font-weight: 600;
-  gap: .55rem;
   line-height: 1.4;
   margin-bottom: 1rem;
   position: relative;
   z-index: 1;
-}
-
-.skillCategory > h3::before {
-  background-color: #64748b;
-  border-radius: 999px;
-  box-shadow: 0 0 0 5px rgba(100, 116, 139, .12);
-  content: "";
-  height: 8px;
-  width: 8px;
 }
 
 .skillList {
