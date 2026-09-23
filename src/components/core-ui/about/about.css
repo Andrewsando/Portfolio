@@ -33,13 +33,45 @@
 }
 
 .resumeLink{
+  align-items: center;
   color: #64748B;
+  display: inline-flex;
+  gap: .3rem;
   padding-top: 20px;
+  transition: color 250ms ease-in-out, transform 250ms ease-in-out;
+  width: fit-content;
+}
+
+.resumeLink:hover,
+.resumeLink:focus-visible {
+  color: #334155;
+  outline: none;
+  transform: translateX(4px);
 }
 
 .aboutArrow{
+  display: inline-block;
   transition: transform 0.3s ease-in-out;
   vertical-align: middle;
+}
+
+.resumeLink:hover .aboutArrow,
+.resumeLink:focus-visible .aboutArrow {
+  transform: translateX(4px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .resumeLink,
+  .aboutArrow {
+    transition: none;
+  }
+
+  .resumeLink:hover,
+  .resumeLink:focus-visible,
+  .resumeLink:hover .aboutArrow,
+  .resumeLink:focus-visible .aboutArrow {
+    transform: none;
+  }
 }
 
 @media (min-width: 601px) {
