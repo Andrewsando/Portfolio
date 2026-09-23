@@ -17,8 +17,11 @@ export const experienceData = [
         startYear: 'Nov 2023',
         endYear: 'Jun 2025',
         achievements: [
-            'Collaborated with designers, QA, Product Owners, and DevOps teams to deliver robust, scalable products aligned with business objectives.',
-            'Identified and resolved technical problems affecting the user experience and product performance.'
+            'Collaborated with Technology Managers and QA engineers to validate releases, resolve issues, and ensure reliable product operation.',
+            'Built and enhanced responsive web pages using Adobe Experience Manager components, aligning implementation with design and business requirements.',
+            'Contributed to the development of an application that gave the client access to essential operational information and supported more informed decision-making.',
+            'Developed a tablet application with React, JavaScript, and modern styling technologies that enabled users abroad to access relevant product information.',
+            'Shared responsibility for the applications’ ongoing stability, presentation quality, and visibility across supported devices.'
         ]
     },
     {
