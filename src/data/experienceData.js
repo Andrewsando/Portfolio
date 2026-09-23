@@ -6,8 +6,11 @@ export const experienceData = [
         startYear: 'Jul 2025',
         endYear: 'Present',
         achievements: [
-            'Create modern, accessible, and responsive interfaces with React, TypeScript, Tailwind CSS, and Styled Components.',
-            'Build reusable components, optimize frontend performance, and keep AEM authoring workflows fluid and intuitive.'
+            'Earned an accelerated promotion ahead of the company’s standard progression timeline by consistently exceeding leadership expectations and demonstrating strong technical growth.',
+            'Enhance complex Adobe Experience Manager implementations, including Forms and Experience Fragments, to support evolving business and authoring requirements.',
+            'Use eDAM to organize and manage digital assets, helping maintain accurate, consistent, and efficient content delivery across web pages.',
+            'Contribute to the development and governance of production websites, safeguarding functionality, visual quality, responsiveness, and release readiness.',
+            'Apply the frontend and cross-functional experience gained in the previous role to deliver accessible, reusable interfaces with React, TypeScript, Tailwind CSS, and Styled Components.'
         ]
     },
     {
