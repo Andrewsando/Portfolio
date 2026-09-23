@@ -136,10 +136,12 @@ html {
   }
 
   .lcr--navbar.scrolled {
-    backdrop-filter: blur(12px) saturate(140%);
-    background-color: rgba(255, 255, 255, .9);
-    border-color: rgba(203, 213, 225, .62);
-    box-shadow: 0 12px 30px rgba(15, 23, 42, .12);
+    -webkit-backdrop-filter: blur(18px) saturate(160%);
+    backdrop-filter: blur(18px) saturate(160%);
+    background-color: rgba(255, 255, 255, .64);
+    border-color: rgba(255, 255, 255, .74);
+    box-shadow: 0 10px 26px rgba(15, 23, 42, .1),
+      inset 0 1px 0 rgba(255, 255, 255, .68);
   }
 
   .navbarToggle {
@@ -159,22 +161,23 @@ html {
     max-height: none;
     opacity: 1;
     overflow: visible;
-    padding: 10px 20px;
+    padding: 6px 16px;
     visibility: visible;
     white-space: nowrap;
   }
 
   .lcr--navbar.open ul {
     max-height: none;
-    padding: 10px 20px;
+    padding: 6px 16px;
   }
 
   .lcr--navbar.open li:first-child a {
-    padding-right: 12px;
+    padding-right: 10px;
   }
 
   .lcr--navbar ul a {
     font-size: 16px;
+    padding: 7px 10px;
   }
 }
 
