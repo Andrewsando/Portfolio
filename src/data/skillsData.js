@@ -1,19 +1,20 @@
 export const skillsData = [
-    'HTML',
-    'Javascript',
-    'CSS',
-    'React',
-    'Next JS',
-    'Bootstrap',
-    'Tailwind',
-    'MySQL',
-    'PostgreSQL',
-    'MaterialUI',
-    'Firebase',
-    'Typescript',
-    'Wordpress',
-    'Git',
-    'Figma',
+    {
+        category: 'Frontend',
+        skills: ['Javascript', 'Typescript', 'React', 'Next JS']
+    },
+    {
+        category: 'Styling',
+        skills: ['HTML', 'CSS', 'Tailwind', 'Bootstrap', 'MaterialUI']
+    },
+    {
+        category: 'Backend / Data',
+        skills: ['Firebase', 'MySQL', 'PostgreSQL']
+    },
+    {
+        category: 'Tools',
+        skills: ['Git', 'Figma', 'Wordpress']
+    },
 ]
 
 // Choose your skills from below. Make sure it's in the same format and spelled correctly.

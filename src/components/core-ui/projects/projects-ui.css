@@ -39,12 +39,11 @@
 }
 
 .projectImage {
-    max-width: 100%;
-    max-height: 100%;
+    width: 100%;
+    aspect-ratio: 16 / 9;
     margin-bottom: 15px;
-    object-fit: fill;
+    object-fit: cover;
     border-radius: 12px;
-    height: 170px;
     box-shadow: 0px 10px 24px 0px rgba(0, 0, 0, 0.56);
     -webkit-box-shadow: 0px 10px 27px -7px rgba(0, 0, 0, 0.56);
     -moz-box-shadow: 0px 10px 27px -7px rgba(0, 0, 0, 0.56);
@@ -66,11 +65,7 @@
 
 @media (min-width: 601px) {
     .projectImage {
-        max-width: 100%;
-        max-height: 100%;
-        object-fit: fill;
-        border-radius: 12px;
-        height: 235px;
+        width: 100%;
     }
 
     .projectTitle {
