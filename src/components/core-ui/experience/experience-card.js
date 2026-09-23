@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react';
+import { IoChevronDownOutline } from 'react-icons/io5';
 import Fade from 'react-reveal/Fade';
 import expImgBlack from '../../../assets/svg/experience/expImgBlack.svg';
 import { ThemeContext } from '../../../contexts/theme-context';
@@ -29,7 +30,9 @@ function ExperienceCard({ id, company, jobtitle, startYear, endYear, achievement
                             <span style={{color: theme.primary}}>{startYear} — {endYear}</span>
                         </div>
                     </div>
-                    <span className={`experience-chevron${isExpanded ? ' expanded' : ''}`} aria-hidden="true">⌄</span>
+                    <span className={`experience-chevron${isExpanded ? ' expanded' : ''}`} aria-hidden="true">
+                        <IoChevronDownOutline />
+                    </span>
                 </button>
                 <div id={achievementsId} className="experience-achievements" hidden={!isExpanded}>
                     <ul>
