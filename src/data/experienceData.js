@@ -28,8 +28,12 @@ export const experienceData = [
         startYear: 'May 2023',
         endYear: 'Oct 2023',
         achievements: [
-            'Developed advanced marketplace features including search, product filtering, personalized recommendations, and inventory management.',
-            'Ensured the marketplace was fully responsive and displayed correctly across mobile and desktop devices.'
+            'Designed and developed the product’s initial website, translating the brand vision into a creative, innovative, and responsive digital experience.',
+            'Coordinated with the team to define communication flows and UX interactions, ensuring a clear and intuitive experience across the platform.',
+            'Contributed to the leadership team responsible for strategic decisions throughout product creation, development, and launch.',
+            'Built multiple web applications and websites conceived as Ambvalent digital products, expanding the company’s product portfolio.',
+            'Collaborated across creative and technical disciplines to turn business ideas into functional, user-focused digital solutions.',
+            'Strengthened brand visibility by supporting social media initiatives and presenting digital solutions to prospective clients.'
         ]
     },
     {
