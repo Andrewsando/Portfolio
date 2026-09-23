@@ -127,6 +127,14 @@ html {
     width: auto;
   }
 
+  .lcr--navbar.open {
+    backdrop-filter: none;
+    background: transparent;
+    border-color: transparent;
+    box-shadow: none;
+    width: auto;
+  }
+
   .navbarToggle {
     display: none;
   }
@@ -147,6 +155,15 @@ html {
     padding: 10px 20px;
     visibility: visible;
     white-space: nowrap;
+  }
+
+  .lcr--navbar.open ul {
+    max-height: none;
+    padding: 10px 20px;
+  }
+
+  .lcr--navbar.open li:first-child a {
+    padding-right: 12px;
   }
 
   .lcr--navbar ul a {

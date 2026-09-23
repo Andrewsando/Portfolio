@@ -27,6 +27,22 @@ function NavbarUI() {
     };
   }, []);
 
+  useEffect(() => {
+    const desktopQuery = window.matchMedia('(min-width: 985px)');
+    const handleDesktopLayout = ({ matches }) => {
+      if (matches) {
+        setIsOpen(false);
+      }
+    };
+
+    handleDesktopLayout(desktopQuery);
+    desktopQuery.addEventListener('change', handleDesktopLayout);
+
+    return () => {
+      desktopQuery.removeEventListener('change', handleDesktopLayout);
+    };
+  }, []);
+
   const handleNavigation = (event, targetId) => {
     event.preventDefault();
     const targetElement = document.getElementById(targetId);
