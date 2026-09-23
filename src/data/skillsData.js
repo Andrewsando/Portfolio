@@ -13,7 +13,7 @@ export const skillsData = [
     },
     {
         category: 'Tools',
-        skills: ['Git', 'Figma', 'Wordpress']
+        skills: ['Git', 'Figma', 'Wordpress', 'AEM']
     },
 ]
 

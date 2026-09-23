@@ -22,14 +22,22 @@ function Skills() {
                         <section className="skillCategory" key={category}>
                             <h3 style={{ color: theme.septenary }}>{category}</h3>
                             <div className="skillList">
-                                {skills.map((skill) => (
-                                    <div className="skill--box" key={skill} style={skillBoxStyle}>
-                                        <img src={skillsImage(skill)} alt="" aria-hidden="true" />
-                                        <span style={{ color: theme.primary }}>
-                                            {skill}
-                                        </span>
-                                    </div>
-                                ))}
+                                {skills.map((skill) => {
+                                    const icon = skillsImage(skill);
+
+                                    return (
+                                        <div className="skill--box" key={skill} style={skillBoxStyle}>
+                                            {icon ? (
+                                                <img src={icon} alt="" aria-hidden="true" />
+                                            ) : (
+                                                <span className="skillIconFallback" aria-hidden="true">{skill}</span>
+                                            )}
+                                            <span style={{ color: theme.primary }}>
+                                                {skill}
+                                            </span>
+                                        </div>
+                                    )
+                                })}
                             </div>
                         </section>
                     ))}
