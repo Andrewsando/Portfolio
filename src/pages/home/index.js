@@ -11,7 +11,7 @@ import Footer from '../../components/core-ui/footer/footer';
 
 function HomePage() {
   return (
-    <div>
+    <div id="top">
       <Helmet>
         <title>Andrés Torres | Frontend Developer</title>
       </Helmet>

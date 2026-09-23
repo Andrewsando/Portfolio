@@ -41,16 +41,27 @@ function NavbarUI() {
 
   return (
     <nav className={`lcr--navbar${isScrolled ? ' scrolled' : ''}${isOpen ? ' open' : ''}`} aria-label="Primary navigation">
-      <button
-        type="button"
-        className="navbarToggle"
-        aria-expanded={isOpen}
-        aria-controls="primary-navigation"
-        onClick={() => setIsOpen((open) => !open)}
-      >
-        <span>{isOpen ? 'Close' : 'Menu'}</span>
-        {isOpen ? <IoCloseOutline aria-hidden="true" /> : <IoMenuOutline aria-hidden="true" />}
-      </button>
+      <div className="navbarHeader">
+        <a
+          className="navbarBrand"
+          href="#top"
+          aria-label="Back to top"
+          onClick={(event) => handleNavigation(event, 'top')}
+        >
+          <span className="navbarMonogram" aria-hidden="true">AT</span>
+          <span>Andrés Torres</span>
+        </a>
+        <button
+          type="button"
+          className="navbarToggle"
+          aria-expanded={isOpen}
+          aria-controls="primary-navigation"
+          onClick={() => setIsOpen((open) => !open)}
+        >
+          <span>{isOpen ? 'Close' : 'Menu'}</span>
+          {isOpen ? <IoCloseOutline aria-hidden="true" /> : <IoMenuOutline aria-hidden="true" />}
+        </button>
+      </div>
       <ul id="primary-navigation">
         {navItems.map(({ id, label }) => (
           <li key={id}>

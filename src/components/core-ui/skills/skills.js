@@ -7,10 +7,6 @@ import './skills.css';
 function Skills() {
     const { theme } = useContext(ThemeContext);
 
-    const skillBoxStyle = {
-        backgroundColor: theme.quaternary
-    }
-
     return (
         <div className="skills" style={{ backgroundColor: theme.secondary }}>
             <div className="skillsHeader">
@@ -26,18 +22,19 @@ function Skills() {
                                     const icon = skillsImage(skill);
 
                                     return (
-                                        <div className="skill--box" key={skill} style={skillBoxStyle}>
-                                            {icon ? (
-                                                <img
-                                                    src={icon}
-                                                    alt=""
-                                                    aria-hidden="true"
-                                                    loading="lazy"
-                                                    decoding="async"
-                                                />
-                                            ) : (
-                                                <span className="skillIconFallback" aria-hidden="true">{skill}</span>
-                                            )}
+                                        <div className="skill--box" key={skill}>
+                                            <span className="skillIcon" aria-hidden="true">
+                                                {icon ? (
+                                                    <img
+                                                        src={icon}
+                                                        alt=""
+                                                        loading="lazy"
+                                                        decoding="async"
+                                                    />
+                                                ) : (
+                                                    <span className="skillIconFallback">{skill}</span>
+                                                )}
+                                            </span>
                                             <span style={{ color: theme.primary }}>
                                                 {skill}
                                             </span>
