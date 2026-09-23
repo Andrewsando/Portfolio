@@ -66,7 +66,8 @@ function NavbarUI() {
           aria-controls="primary-navigation"
           onClick={() => setIsOpen((open) => !open)}
         >
-          {isOpen ? <IoCloseOutline aria-hidden="true" /> : <IoMenuOutline aria-hidden="true" />}
+          <IoMenuOutline className="navbarMenuIcon" aria-hidden="true" />
+          <IoCloseOutline className="navbarCloseIcon" aria-hidden="true" />
         </button>
       </div>
       <ul id="primary-navigation">
