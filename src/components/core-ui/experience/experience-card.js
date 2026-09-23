@@ -28,9 +28,6 @@ function ExperienceCard({ id, company, jobtitle, startYear, endYear, achievement
                             <h5 style={{color: theme.primary}}>{company}</h5>
                             <span style={{color: theme.primary}}>{startYear} — {endYear}</span>
                         </div>
-                        <span className="experience-prompt">
-                            {isExpanded ? 'Hide achievements' : 'Click or tap to view achievements'}
-                        </span>
                     </div>
                     <span className={`experience-chevron${isExpanded ? ' expanded' : ''}`} aria-hidden="true">⌄</span>
                 </button>

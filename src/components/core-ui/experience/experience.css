@@ -95,15 +95,6 @@
   font-weight: 400;
 }
 
-.experience-prompt {
-  color: #475569;
-  display: block;
-  font-family: var(--primaryFont);
-  font-size: 12px;
-  font-weight: 500;
-  margin-top: .4rem;
-}
-
 .experience-chevron {
   color: #64748b;
   font-size: 24px;
@@ -214,10 +205,6 @@
   .experience-meta>h5,
   .experience-meta>span {
     font-size: 18px;
-  }
-
-  .experience-prompt {
-    font-size: 13px;
   }
 
   .experience-achievements {
