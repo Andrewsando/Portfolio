@@ -1,34 +1,47 @@
-import { makeStyles } from '@mui/styles';
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import Fade from 'react-reveal/Fade';
 import expImgBlack from '../../../assets/svg/experience/expImgBlack.svg';
-import expImgWhite from '../../../assets/svg/experience/expImgWhite.svg';
 import { ThemeContext } from '../../../contexts/theme-context';
 import './experience.css';
 
-function ExperienceCard({id, company, jobtitle}) {
+function ExperienceCard({ id, company, jobtitle, startYear, endYear, achievements }) {
     const { theme } = useContext(ThemeContext);
-
-    const useStyles = makeStyles((t) => ({
-        experienceCard : {
-            backgroundColor:theme.quaternary,
-        },
-    }));
-
-    const classes = useStyles();
-
+    const [isExpanded, setIsExpanded] = useState(false);
+    const achievementsId = `experience-achievements-${id}`;
 
     return (
         <Fade bottom>
-            <div key={id} className={`experience-card ${classes.experienceCard}`}>
-                <div className="expcard-img" style={{backgroundColor: theme.secondary}}>
-                    <img src={expImgBlack} alt="" />
+            <article className="experience-entry" style={{ backgroundColor: theme.quaternary }}>
+                <button
+                    type="button"
+                    className="experience-card"
+                    aria-expanded={isExpanded}
+                    aria-controls={achievementsId}
+                    onClick={() => setIsExpanded((expanded) => !expanded)}
+                >
+                    <div className="expcard-img" style={{backgroundColor: theme.secondary}}>
+                        <img src={expImgBlack} alt="" />
+                    </div>
+                    <div className="experience-details">
+                        <h4 style={{color: theme.septenary}}>{jobtitle}</h4>
+                        <div className="experience-meta">
+                            <h5 style={{color: theme.primary}}>{company}</h5>
+                            <span style={{color: theme.primary}}>{startYear} — {endYear}</span>
+                        </div>
+                        <span className="experience-prompt">
+                            {isExpanded ? 'Hide achievements' : 'Click or tap to view achievements'}
+                        </span>
+                    </div>
+                    <span className={`experience-chevron${isExpanded ? ' expanded' : ''}`} aria-hidden="true">⌄</span>
+                </button>
+                <div id={achievementsId} className="experience-achievements" hidden={!isExpanded}>
+                    <ul>
+                        {achievements.map((achievement) => (
+                            <li key={achievement}>{achievement}</li>
+                        ))}
+                    </ul>
                 </div>
-                <div className="experience-details">
-                    <h4 style={{color: theme.septenary}}>{jobtitle}</h4>
-                    <h5 style={{color: theme.primary}}>{company}</h5>
-                </div>
-            </div>
+            </article>
         </Fade>   
     )
 }

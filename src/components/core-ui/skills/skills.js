@@ -12,7 +12,7 @@ function Skills() {
     }
 
     return (
-        <div className="skills" id="skills" style={{ backgroundColor: theme.secondary }}>
+        <div className="skills" style={{ backgroundColor: theme.secondary }}>
             <div className="skillsHeader">
                 <h2 style={{ color: theme.primary }}>Skills</h2>
             </div>
@@ -28,7 +28,13 @@ function Skills() {
                                     return (
                                         <div className="skill--box" key={skill} style={skillBoxStyle}>
                                             {icon ? (
-                                                <img src={icon} alt="" aria-hidden="true" />
+                                                <img
+                                                    src={icon}
+                                                    alt=""
+                                                    aria-hidden="true"
+                                                    loading="lazy"
+                                                    decoding="async"
+                                                />
                                             ) : (
                                                 <span className="skillIconFallback" aria-hidden="true">{skill}</span>
                                             )}

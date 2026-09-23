@@ -13,9 +13,7 @@ function HomePage() {
   return (
     <div>
       <Helmet>
-        <title>Andrés Torres - Portfolio</title>
-        <link href="./output.css" rel="stylesheet"/>
-
+        <title>Andrés Torres | Frontend Developer</title>
       </Helmet>
       <div className='relative flex h-full flex-col'>
         <div className="relative isolate mb-24  w-full">

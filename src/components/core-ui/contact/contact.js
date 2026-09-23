@@ -10,7 +10,7 @@ export default function ContactUI() {
             <h1 className='contactTitle'>Contact</h1>
             <div className='container'>
                 <p className='inTouchText'>If you'd like to get in touch, you can reach me using the following methods.</p>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-20">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-20">
                 <div>
                     <a href="mailto:andres.torressandoval@hotmail.com">
                     <h2>Email</h2>
@@ -18,19 +18,19 @@ export default function ContactUI() {
                     </a>
                 </div>
                 <div>
-                    <a href="https://github.com/Andrewsando">
+                    <a href="https://github.com/Andrewsando" target="_blank" rel="noopener noreferrer">
                     <h2>GitHub</h2>
                         <p>git/andres</p>
                     </a>
                 </div>
                 <div>
-                    <a href="https://www.linkedin.com/in/andrewsando">
+                    <a href="https://www.linkedin.com/in/andrewsando" target="_blank" rel="noopener noreferrer">
                     <h2>LinkedIn</h2>
                         <p>in/andres</p>
                     </a>
                 </div>
                 <div>
-                    <a href="https://gitlab.com/Andrew.sando">
+                    <a href="https://gitlab.com/Andrew.sando" target="_blank" rel="noopener noreferrer">
                     <h2>GitLab</h2>
                         <p>gitlab/andres</p>
                     </a>
@@ -40,4 +40,3 @@ export default function ContactUI() {
         </div>
     )
 }
-

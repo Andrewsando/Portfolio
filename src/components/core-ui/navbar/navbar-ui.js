@@ -1,64 +1,64 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './navbar.css';
 
+const navItems = [
+  { id: 'about', label: 'About' },
+  { id: 'experience', label: 'Experience' },
+  { id: 'skills', label: 'Skills' },
+  { id: 'projects', label: 'Projects' },
+  { id: 'education', label: 'Education' },
+];
+
 function NavbarUI() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
-      const navbar = document.getElementById('navbar');
-      if (window.scrollY > 0) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-      }
+      setIsScrolled(window.scrollY > 0);
     };
 
-    window.addEventListener('scroll', handleScroll);
-
-    const handleClick = (event) => {
-      event.preventDefault();
-      const targetId = event.currentTarget.getAttribute('href').substring(1);
-      const targetElement = document.getElementById(targetId);
-      const offsetPosition = targetElement.offsetTop - 100;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth"
-      });
-    };
-
-    const navLinks = document.querySelectorAll('.lcr--navbar a');
-    navLinks.forEach(link => {
-      link.addEventListener('click', handleClick);
-    });
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
-      navLinks.forEach(link => {
-        link.removeEventListener('click', handleClick);
-      });
     };
   }, []);
 
+  const handleNavigation = (event, targetId) => {
+    event.preventDefault();
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      const offsetPosition = targetElement.offsetTop - 100;
+      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+    }
+
+    setIsOpen(false);
+  };
+
   return (
-    <div id='navbar' className='lcr--navbar'>
-      <ul>
-        <li>
-          <a href="#about">About</a>
-        </li>
-        <li>
-          <a href="#experience">Experience</a>
-        </li>
-        <li>
-          <a href="#skills">Skills</a>
-        </li>
-        <li>
-          <a href="#projects">Projects</a>
-        </li>
-        <li>
-          <a href="#education">Education</a>
-        </li>
+    <nav className={`lcr--navbar${isScrolled ? ' scrolled' : ''}${isOpen ? ' open' : ''}`} aria-label="Primary navigation">
+      <button
+        type="button"
+        className="navbarToggle"
+        aria-expanded={isOpen}
+        aria-controls="primary-navigation"
+        onClick={() => setIsOpen((open) => !open)}
+      >
+        <span>{isOpen ? 'Close menu' : 'Menu'}</span>
+      </button>
+      <ul id="primary-navigation">
+        {navItems.map(({ id, label }) => (
+          <li key={id}>
+            <a href={`#${id}`} onClick={(event) => handleNavigation(event, id)}>
+              {label}
+            </a>
+          </li>
+        ))}
       </ul>
-    </div>
+    </nav>
   );
 }
 

@@ -9,19 +9,32 @@ function ProjectsUI() {
     return (
         <div className="container">
             <div>
-                <h1 className="projecSectionTitle" id="projects" style={{ color: theme.primary }}>Projects</h1>
+                <h1 className="projecSectionTitle" style={{ color: theme.primary }}>Projects</h1>
                 <div className="projectsContainer">
                     {projectsData.map((project) => {
-                        const { id, projectName, description, link, image } = project
+                        const { id, projectName, description, link, repository, image } = project
                         return (
-                            <a href={link}>
-                                <div key={id} className="projectContainer">
-                                    <img src={image} alt={projectName} className="projectImage" />
-
-                                    <h3 className="projectTitle" style={{ color: theme.septenary }}>{projectName}</h3>
-                                    <h3 className="projectDescription" style={{ color: theme.primary }}>{description}</h3>
+                            <article key={id} className="projectContainer">
+                                <img
+                                    src={image}
+                                    alt={`${projectName} website preview`}
+                                    className="projectImage"
+                                    loading="lazy"
+                                    decoding="async"
+                                />
+                                <h3 className="projectTitle" style={{ color: theme.septenary }}>{projectName}</h3>
+                                <p className="projectDescription" style={{ color: theme.primary }}>{description}</p>
+                                <div className="projectActions">
+                                    <a href={link} target="_blank" rel="noopener noreferrer">
+                                        Visit project
+                                    </a>
+                                    {repository && (
+                                        <a href={repository} target="_blank" rel="noopener noreferrer">
+                                            View code
+                                        </a>
+                                    )}
                                 </div>
-                            </a>
+                            </article>
                         )
                     })}
                 </div>

@@ -22,22 +22,37 @@
   z-index: 10;
 }
 
+.experience-entry {
+  border-radius: 20px;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  transition: background-color 200ms ease-in-out;
+  width: 100%;
+}
+
 .experience-card {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   width: 100%;
-  height: 100px;
+  min-height: 100px;
   padding: 1.5rem;
-  border-radius: 20px;
-  margin-bottom: 1.5rem;
-  transition: background-color 200ms ease-in-out;
-  place-items: center;
+  text-align: left;
 }
 
-.experience-card:hover{
+.experience-entry:hover {
   transition: 300ms ease-in-out;
   background-color: rgba(226, 232, 240, .7);
+}
+
+.experience-card:focus-visible {
+  outline: 2px solid #64748b;
+  outline-offset: -4px;
 }
 
 .expcard-img {
@@ -56,6 +71,7 @@
 }
 
 .experience-details {
+  flex: 1;
   margin-left: 0.6rem;
 }
 
@@ -65,10 +81,58 @@
   font-weight: 600;
 }
 
-.experience-details>h5 {
+.experience-meta {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .25rem .75rem;
+}
+
+.experience-meta>h5,
+.experience-meta>span {
   font-family: var(--primaryFont);
   font-size: 13px;
   font-weight: 400;
+}
+
+.experience-prompt {
+  color: #475569;
+  display: block;
+  font-family: var(--primaryFont);
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: .4rem;
+}
+
+.experience-chevron {
+  color: #64748b;
+  font-size: 24px;
+  margin-left: 1rem;
+  transition: transform 200ms ease-in-out;
+}
+
+.experience-chevron.expanded {
+  transform: rotate(180deg);
+}
+
+.experience-achievements {
+  border-top: 1px solid #cbd5e1;
+  padding: 1.25rem 1.5rem 1.5rem;
+}
+
+.experience-achievements ul {
+  display: grid;
+  gap: .75rem;
+  list-style: disc;
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.experience-achievements li {
+  color: #475569;
+  font-family: var(--primaryFont);
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 .experience-image {
@@ -109,7 +173,11 @@
   }
 
   .experience-card {
-    height: 80px;
+    min-height: 100px;
+  }
+
+  .experience-achievements {
+    padding-left: 5rem;
   }
 
   .expcard-img {
@@ -127,8 +195,11 @@
     padding: 0 24px !important;
   }
   .experience-card {
+    width: 100%;
+    min-height: 140px;
+  }
+  .experience-entry {
     width: 90%;
-    height: 140px;
   }
   .experience-description>h1 {
     font-size: 40px;
@@ -140,7 +211,16 @@
     font-size: 20px;
   }
   
-  .experience-details>h5 {
+  .experience-meta>h5,
+  .experience-meta>span {
     font-size: 18px;
+  }
+
+  .experience-prompt {
+    font-size: 13px;
+  }
+
+  .experience-achievements {
+    padding-left: 7rem;
   }
 }

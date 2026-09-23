@@ -10,15 +10,21 @@ function Footer({contact, home, resume}) {
             <div className='textContainer'>
                 <p>© {currentYear}  -  Andres Torres</p>
                 <div className='link-container'>
-                <Link to="/contact" className='contactCTA'>
-                    {contact}
-                </Link>
-                <Link to="/" className='contactCTA'>
-                    {home}
-                </Link>
-                <Link to="/resume" className='contactCTA'>
-                    {resume}
-                </Link>
+                {contact && (
+                    <Link to="/contact" className='contactCTA'>
+                        {contact}
+                    </Link>
+                )}
+                {home && (
+                    <Link to="/" className='contactCTA'>
+                        {home}
+                    </Link>
+                )}
+                {resume && (
+                    <Link to="/resume" className='contactCTA'>
+                        {resume}
+                    </Link>
+                )}
                 </div>
             </div>
         </div>

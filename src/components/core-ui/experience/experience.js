@@ -9,8 +9,8 @@ function Experience() {
 
     const { theme } = useContext(ThemeContext);
     return (
-        <div id="experience" style={{ backgroundColor: theme.secondary }}>
-            <Container className="experience" id="experience">
+        <div style={{ backgroundColor: theme.secondary }}>
+            <Container className="experience">
                 <div className="experience-body">
                     <div className="experience-description">
                         <h1 style={{ color: theme.primary }}>Experience</h1>
@@ -20,6 +20,9 @@ function Experience() {
                                 id={exp.id}
                                 jobtitle={exp.jobtitle}
                                 company={exp.company}
+                                startYear={exp.startYear}
+                                endYear={exp.endYear}
+                                achievements={exp.achievements}
                             />
                         ))}
                     </div>
