@@ -23,10 +23,15 @@
 }
 
 .experience-entry {
+  border: 1px solid transparent;
   border-radius: 20px;
   margin-bottom: 1.5rem;
   overflow: hidden;
-  transition: background-color 200ms ease-in-out;
+  transition:
+    background-color 200ms ease-in-out,
+    border-color 200ms ease-in-out,
+    box-shadow 200ms ease-in-out,
+    transform 200ms ease-in-out;
   width: 100%;
 }
 
@@ -46,8 +51,19 @@
 }
 
 .experience-entry:hover {
-  transition: 300ms ease-in-out;
   background-color: rgba(226, 232, 240, .7);
+  border-color: #cbd5e1;
+  box-shadow: 0 12px 24px rgba(15, 23, 42, .08);
+  transform: translateY(-3px);
+}
+
+.experience-entry.expanded {
+  border-color: #94a3b8;
+  box-shadow: 0 14px 28px rgba(15, 23, 42, .1);
+}
+
+.experience-entry:active {
+  transform: translateY(-1px) scale(.995);
 }
 
 .experience-card:focus-visible {
@@ -116,6 +132,18 @@
 
 .experience-chevron.expanded {
   transform: rotate(180deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .experience-entry,
+  .experience-chevron {
+    transition: none;
+  }
+
+  .experience-entry:hover,
+  .experience-entry:active {
+    transform: none;
+  }
 }
 
 .experience-achievements {
