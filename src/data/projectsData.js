@@ -1,5 +1,5 @@
 import ambvalent from '../../src/assets/png/ambvalent.png'
-import eventox from '../../src/assets/png/eventox.png'
+import nestifine from '../../src/assets/png/nestifine.png'
 import spootchat from '../../src/assets/png/spootchat.png'
 import gaming from '../../src/assets/png/gaming.png'
 
@@ -8,15 +8,15 @@ import gaming from '../../src/assets/png/gaming.png'
 export const projectsData = [
     {
         id: 1,
-        projectName: 'EventoX',
-        description: 'Development of a marketplace for the sale of event tickets with Dashboards and notification systems',
-        link: "https://eventox-client-dun.vercel.app/",
-        image: eventox,
+        projectName: 'Nestifine',
+        description: 'A unified platform for residential communities, HOAs, and short-term rentals',
+        link: "https://nestifine.com/",
+        image: nestifine,
     },
     {
         id: 2,
         projectName: 'Ambvalent',
-        description: 'E-commerce for sales of designs and clothing in the USA, it has not yet been refined',
+        description: 'Software engineering studio focused on scalable digital products, intelligent automation, and AI-powered solutions',
         link: "https://ambvalent.com/",
         image: ambvalent,
 

@@ -57,8 +57,8 @@ function HomePage() {
       <section id="education">
         <Education />
       </section>
-      <div class="w-9/10 justify-self-center">
-      <Footer contact={"Contact"} resume={"Resume"}/>
+      <div className="footerWrapper">
+        <Footer contact={"Contact"} resume={"Resume"}/>
       </div>
     </div>
   );

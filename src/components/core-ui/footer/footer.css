@@ -1,7 +1,12 @@
+.footerWrapper {
+    width: 90%;
+    margin: 0 auto;
+}
+
 .footerContainer {
     max-width: 985px;
     width: 100%;
-    justify-self: center;
+    margin: 0 auto;
     padding-bottom: 20px;
     font-family: var(--primaryFont);
     padding-top: 0;
