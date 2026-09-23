@@ -26,7 +26,13 @@
   background-color: #F1F5F9;
   border-radius: 20px;
   margin-bottom: 1.5rem;
+  transition: 400ms ease-in-out;
   width: 100%;
+}
+
+.experience-entry:hover {
+  background-color: rgba(226, 232, 240, .7);
+  transform: scale(1.02);
 }
 
 .experience-card {
@@ -46,10 +52,8 @@
   transition: 400ms ease-in-out;
 }
 
-.experience-card:hover {
+.experience-entry:hover .experience-card {
   background-color: rgba(226, 232, 240, .7);
-  transform: scale(1.02);
-  transition: 400ms ease-in-out;
 }
 
 .experience-entry.expanded {
@@ -125,19 +129,45 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .experience-entry,
   .experience-card,
+  .experience-achievements,
+  .experience-achievements-content,
   .experience-chevron {
     transition: none;
   }
 
-  .experience-card:hover {
+  .experience-entry:hover {
     transform: none;
   }
 }
 
 .experience-achievements {
-  border-top: 1px solid #cbd5e1;
-  padding: 1.25rem 1.5rem 1.5rem;
+  border-top: 1px solid transparent;
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition: grid-template-rows 300ms ease-in-out,
+    opacity 200ms ease-in-out,
+    border-color 300ms ease-in-out;
+}
+
+.experience-achievements.expanded {
+  border-top-color: #cbd5e1;
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+.experience-achievements-content {
+  min-height: 0;
+  overflow: hidden;
+  padding: 0 1.5rem;
+  transition: padding 300ms ease-in-out;
+}
+
+.experience-achievements.expanded .experience-achievements-content {
+  padding-bottom: 1.5rem;
+  padding-top: 1.25rem;
 }
 
 .experience-achievements ul {
@@ -197,7 +227,7 @@
     padding: 1.5rem;
   }
 
-  .experience-achievements {
+  .experience-achievements-content {
     padding-left: 5rem;
   }
 

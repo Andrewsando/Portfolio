@@ -34,12 +34,18 @@ function ExperienceCard({ id, company, jobtitle, startYear, endYear, achievement
                         <IoChevronDownOutline />
                     </span>
                 </button>
-                <div id={achievementsId} className="experience-achievements" hidden={!isExpanded}>
-                    <ul>
-                        {achievements.map((achievement) => (
-                            <li key={achievement}>{achievement}</li>
-                        ))}
-                    </ul>
+                <div
+                    id={achievementsId}
+                    className={`experience-achievements${isExpanded ? ' expanded' : ''}`}
+                    aria-hidden={!isExpanded}
+                >
+                    <div className="experience-achievements-content">
+                        <ul>
+                            {achievements.map((achievement) => (
+                                <li key={achievement}>{achievement}</li>
+                            ))}
+                        </ul>
+                    </div>
                 </div>
             </article>
         </Fade>   
