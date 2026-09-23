@@ -27,7 +27,6 @@ export const projectsData = [
         description: 'Platform to listen to music online with the possibility of chatting with artists or others interested in music',
         tags: ['React', 'Vercel', 'Vue', 'Firebase', 'etc'],
         link: "https://spoot-chat-client.vercel.app/",
-        repository: "https://github.com/Andrewsando/SpootFront",
         image: spootchat,
 
     },
@@ -37,7 +36,6 @@ export const projectsData = [
         description: 'E-commerce platform for purchasing video games',
         tags: ['React', 'Vercel', 'Vue', 'Firebase', 'etc'],
         image: gaming,
-        link: "https://gaming-ecommerce.netlify.app/",
-        repository: "https://github.com/Andrewsando/ecommerce-frontend"
+        link: "https://gaming-ecommerce.netlify.app/"
     }
 ]

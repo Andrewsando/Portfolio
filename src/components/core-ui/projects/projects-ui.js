@@ -12,7 +12,7 @@ function ProjectsUI() {
                 <h1 className="projecSectionTitle" style={{ color: theme.primary }}>Projects</h1>
                 <div className="projectsContainer">
                     {projectsData.map((project) => {
-                        const { id, projectName, description, link, repository, image } = project
+                        const { id, projectName, description, link, image } = project
                         return (
                             <article key={id} className="projectContainer">
                                 <img
@@ -28,11 +28,6 @@ function ProjectsUI() {
                                     <a href={link} target="_blank" rel="noopener noreferrer">
                                         Visit project
                                     </a>
-                                    {repository && (
-                                        <a href={repository} target="_blank" rel="noopener noreferrer">
-                                            View code
-                                        </a>
-                                    )}
                                 </div>
                             </article>
                         )
