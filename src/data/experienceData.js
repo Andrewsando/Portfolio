@@ -1,12 +1,12 @@
 export const experienceData = [
     {
         id: 1,
-        company: 'Publicis Production · Publicis Global Delivery',
+        company: 'Publicis Production (Publicis Global Delivery)',
         jobtitle: 'Frontend Developer',
         startYear: 'Jan 2026',
         endYear: 'Present',
         achievements: [
-            'Contribute to the frontend development of digital experiences for a single international brand within Publicis Production, translating its content and business requirements into reliable web solutions.',
+            'Develop and maintain digital experiences for an international brand account within Publicis Production, translating brand, content, and business requirements into reliable web solutions.',
             'Enhance complex Adobe Experience Manager solutions, including AEM Forms and Experience Fragments, to support efficient and adaptable content production.',
             'Use eDAM to organize and manage digital assets, helping teams deliver accurate and consistent content across web experiences.',
             'Develop and continuously improve responsive production websites with React and Styled Components, ensuring reliable functionality, visual consistency, and release quality.'
