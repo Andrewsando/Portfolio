@@ -6,7 +6,7 @@ export const experienceData = [
         startYear: 'Jan 2026',
         endYear: 'Present',
         achievements: [
-            'Contribute to Publicis Production’s global creative production network, connecting frontend engineering, content, and technology to deliver scalable digital experiences for international brands.',
+            'Contribute to the frontend development of digital experiences for a single international brand within Publicis Production, translating its content and business requirements into reliable web solutions.',
             'Enhance complex Adobe Experience Manager solutions, including AEM Forms and Experience Fragments, to support efficient and adaptable content production.',
             'Use eDAM to organize and manage digital assets, helping teams deliver accurate and consistent content across web experiences.',
             'Develop and continuously improve responsive production websites with React and Styled Components, ensuring reliable functionality, visual consistency, and release quality.'
