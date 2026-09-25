@@ -172,12 +172,19 @@
     padding: clamp(22px, 4vw, 36px);
 }
 
+.projectModalHeading {
+    align-items: center;
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
 .projectModalContent h3 {
     color: #1e293b;
     font-size: clamp(25px, 4vw, 34px);
     letter-spacing: -.025em;
     line-height: 1.1;
-    margin-bottom: 12px;
 }
 
 .projectModalContent>p {
@@ -219,7 +226,7 @@
     padding: 7px 11px;
 }
 
-.projectModalContent>a {
+.projectModalHeading>a {
     align-items: center;
     background: #334155;
     border-radius: 999px;
@@ -228,13 +235,13 @@
     font-size: 13px;
     font-weight: 600;
     gap: 7px;
-    margin-top: 24px;
     padding: 10px 16px;
+    white-space: nowrap;
     transition: background-color 200ms ease-in-out, transform 200ms ease-in-out;
 }
 
-.projectModalContent>a:hover,
-.projectModalContent>a:focus-visible {
+.projectModalHeading>a:hover,
+.projectModalHeading>a:focus-visible {
     background: #1e293b;
     outline: none;
     transform: translateY(-2px);
@@ -307,7 +314,7 @@
     .projectActions button,
     .projectModalBackdrop,
     .projectModal,
-    .projectModalContent>a {
+    .projectModalHeading>a {
         animation: none;
         transition: none;
     }

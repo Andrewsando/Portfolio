@@ -109,16 +109,18 @@ function ProjectsUI() {
                             <source src={selectedProject.video} type="video/webm" />
                         </video>
                         <div className="projectModalContent">
-                            <h3 id="project-modal-title">{selectedProject.projectName}</h3>
+                            <div className="projectModalHeading">
+                                <h3 id="project-modal-title">{selectedProject.projectName}</h3>
+                                <a href={selectedProject.link} target="_blank" rel="noopener noreferrer">
+                                    Visit project <span aria-hidden="true">↗</span>
+                                </a>
+                            </div>
                             <p>{selectedProject.description}</p>
                             <p className="projectModalDetails">{selectedProject.details}</p>
                             <p className="projectModalStackTitle">Stack used</p>
                             <ul aria-label={`${selectedProject.projectName} technology stack`}>
                                 {selectedProject.stack.map((technology) => <li key={technology}>{technology}</li>)}
                             </ul>
-                            <a href={selectedProject.link} target="_blank" rel="noopener noreferrer">
-                                Visit project <span aria-hidden="true">↗</span>
-                            </a>
                         </div>
                     </section>
                 </div>,
