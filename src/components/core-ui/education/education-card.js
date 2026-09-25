@@ -38,7 +38,7 @@ function EducationCard({ institution, course, startYear, endYear, compact = fals
                     <h4 style={{ color: theme.septenary }}>{course}</h4>
                     <h5 style={{ color: theme.primary }}>{institution}</h5>
                 </div>
-                {onClick && <span className="certificate-card-action" aria-hidden="true">View →</span>}
+                {onClick && <span className="certificate-card-action" aria-hidden="true">+</span>}
             </CardElement>
         </Fade>
     )

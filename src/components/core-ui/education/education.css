@@ -64,6 +64,7 @@
 .certification-grid {
   display: grid;
   gap: 14px;
+  grid-template-columns: 1fr;
   width: 100%;
 }
 
@@ -71,9 +72,10 @@
   border: 0;
   cursor: pointer;
   font-family: inherit;
+  gap: 12px;
   height: auto;
   margin-bottom: 0;
-  min-height: 88px;
+  min-height: 92px;
   padding: 1rem;
   text-align: left;
 }
@@ -88,20 +90,49 @@
 }
 
 .certificate-card-action {
+  align-items: center;
+  border: 1px solid rgba(100, 116, 139, .35);
+  border-radius: 50%;
   color: #64748b;
+  display: flex;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
   flex-shrink: 0;
-  font-family: var(--primaryFont);
-  font-size: 11px;
-  font-weight: 600;
+  height: 30px;
+  justify-content: center;
+  line-height: 1;
   margin-left: auto;
-  padding-left: 12px;
-  transition: color 200ms ease-in-out, transform 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out, color 200ms ease-in-out, transform 200ms ease-in-out;
+  width: 30px;
 }
 
 .certification-card:hover .certificate-card-action,
 .certification-card:focus-visible .certificate-card-action {
-  color: #0f172a;
-  transform: translateX(3px);
+  background: #334155;
+  border-color: #334155;
+  color: #fff;
+  transform: rotate(90deg);
+}
+
+.certification-card .education-details {
+  flex: 1;
+  margin-left: 0;
+  min-width: 0;
+}
+
+.certification-card .education-details>h4,
+.certification-card .education-details>h5 {
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+.certification-card .education-details>h4 {
+  line-height: 1.35;
+}
+
+.certification-card .education-details>h5 {
+  line-height: 1.4;
 }
 
 .certification-card:focus-visible {
@@ -359,10 +390,6 @@
     width: 36px;
   }
 
-  .certification-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .education-card.certification-card {
     min-height: 96px;
   }
@@ -400,10 +427,6 @@
   .education-card.certification-card {
     height: auto;
     width: 100%;
-  }
-
-  .certification-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .education-details>h6 {
