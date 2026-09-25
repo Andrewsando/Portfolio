@@ -1,24 +1,52 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { projectsData } from "../../../data/projectsData"
 import { ThemeContext } from '../../../contexts/theme-context';
 import './projects-ui.css'
 
 function ProjectsUI() {
     const { theme } = useContext(ThemeContext);
-    const [expandedProject, setExpandedProject] = useState(null);
+    const [selectedProject, setSelectedProject] = useState(null);
+    const closeButtonRef = useRef(null);
+    const triggerRef = useRef(null);
+
+    useEffect(() => {
+        if (!selectedProject) return undefined;
+
+        const previousOverflow = document.body.style.overflow;
+        document.body.style.overflow = 'hidden';
+        closeButtonRef.current?.focus();
+
+        const handleKeyDown = (event) => {
+            if (event.key === 'Escape') {
+                setSelectedProject(null);
+            }
+        };
+
+        window.addEventListener('keydown', handleKeyDown);
+
+        return () => {
+            document.body.style.overflow = previousOverflow;
+            window.removeEventListener('keydown', handleKeyDown);
+            triggerRef.current?.focus();
+        };
+    }, [selectedProject]);
+
+    const openProject = (project, event) => {
+        triggerRef.current = event.currentTarget;
+        setSelectedProject(project);
+    };
 
     return (
-        <div className="container">
+        <div className="projectsSection">
             <div>
                 <h2 className="projectSectionTitle" style={{ color: theme.primary }}>Projects</h2>
                 <div className="projectsContainer">
                     {projectsData.map((project) => {
-                        const { id, projectName, description, details, tags, link, image } = project
-                        const isExpanded = expandedProject === id;
-                        const detailsId = `project-details-${id}`;
+                        const { id, projectName, description, link, image } = project
 
                         return (
-                            <article key={id} className={`projectContainer${isExpanded ? ' expanded' : ''}`}>
+                            <article key={id} className="projectContainer">
                                 <img
                                     src={image}
                                     alt={`${projectName} website preview`}
@@ -28,30 +56,16 @@ function ProjectsUI() {
                                 />
                                 <h3 className="projectTitle" style={{ color: theme.septenary }}>{projectName}</h3>
                                 <p className="projectDescription" style={{ color: theme.primary }}>{description}</p>
-                                <div
-                                    id={detailsId}
-                                    className={`projectDetails${isExpanded ? ' expanded' : ''}`}
-                                    aria-hidden={!isExpanded}
-                                >
-                                    <div className="projectDetailsContent">
-                                        <p>{details}</p>
-                                        <ul aria-label={`${projectName} highlights`}>
-                                            {tags.map((tag) => <li key={tag}>{tag}</li>)}
-                                        </ul>
-                                    </div>
-                                </div>
                                 <div className="projectActions">
                                     <button
                                         type="button"
-                                        aria-expanded={isExpanded}
-                                        aria-controls={detailsId}
-                                        onClick={() => setExpandedProject(isExpanded ? null : id)}
+                                        onClick={(event) => openProject(project, event)}
+                                        aria-haspopup="dialog"
                                     >
-                                        {isExpanded ? 'Hide details' : 'Explore details'}
-                                        <span className="projectActionIcon" aria-hidden="true">+</span>
+                                        View details <span aria-hidden="true">→</span>
                                     </button>
                                     <a href={link} target="_blank" rel="noopener noreferrer">
-                                        Visit project
+                                        Visit project <span aria-hidden="true">↗</span>
                                     </a>
                                 </div>
                             </article>
@@ -59,6 +73,49 @@ function ProjectsUI() {
                     })}
                 </div>
             </div>
+            {selectedProject && createPortal(
+                <div
+                    className="projectModalBackdrop"
+                    onMouseDown={(event) => {
+                        if (event.target === event.currentTarget) setSelectedProject(null);
+                    }}
+                >
+                    <section
+                        className="projectModal"
+                        role="dialog"
+                        aria-modal="true"
+                        aria-labelledby="project-modal-title"
+                    >
+                        <button
+                            ref={closeButtonRef}
+                            type="button"
+                            className="projectModalClose"
+                            aria-label="Close project details"
+                            onClick={() => setSelectedProject(null)}
+                        >
+                            ×
+                        </button>
+                        <img
+                            src={selectedProject.image}
+                            alt={`${selectedProject.projectName} website preview`}
+                            className="projectModalImage"
+                        />
+                        <div className="projectModalContent">
+                            <p className="projectModalEyebrow">Selected project</p>
+                            <h3 id="project-modal-title">{selectedProject.projectName}</h3>
+                            <p>{selectedProject.description}</p>
+                            <p className="projectModalDetails">{selectedProject.details}</p>
+                            <ul aria-label={`${selectedProject.projectName} highlights`}>
+                                {selectedProject.tags.map((tag) => <li key={tag}>{tag}</li>)}
+                            </ul>
+                            <a href={selectedProject.link} target="_blank" rel="noopener noreferrer">
+                                Visit project <span aria-hidden="true">↗</span>
+                            </a>
+                        </div>
+                    </section>
+                </div>,
+                document.body
+            )}
         </div>
     )
 }
