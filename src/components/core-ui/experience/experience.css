@@ -247,11 +247,11 @@
   }
 
   .expcard-img {
-    width: 55px;
-    height: 55px;
+    width: 48px;
+    height: 48px;
   }
   .expcard-img>img {
-    width: 36px;
+    width: 29px;
   }
 }
 
