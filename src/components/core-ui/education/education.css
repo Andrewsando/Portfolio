@@ -29,6 +29,13 @@
   align-self: center;
 }
 
+.education-list {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
 .education-card {
   display: flex;
   flex-direction: row;
@@ -40,6 +47,40 @@
   border-radius: 20px;
   margin-bottom: 1.5rem;
   transition: background-color 200ms ease-in-out;
+}
+
+.certifications {
+  margin-top: 8px;
+  width: 100%;
+}
+
+.certifications>h3 {
+  font-family: var(--primaryFont);
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.certification-grid {
+  display: grid;
+  gap: 14px;
+  width: 100%;
+}
+
+.education-card.certification-card {
+  height: auto;
+  margin-bottom: 0;
+  min-height: 88px;
+  padding: 1rem;
+}
+
+.certification-card .educard-img {
+  height: 36px;
+  width: 36px;
+}
+
+.certification-card .educard-img>img {
+  width: 22px;
 }
 
 .education-card:hover {
@@ -121,6 +162,23 @@
   .educard-img>img {
     width: 36px;
   }
+
+  .certification-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .education-card.certification-card {
+    min-height: 96px;
+  }
+
+  .certification-card .educard-img {
+    height: 42px;
+    width: 42px;
+  }
+
+  .certification-card .educard-img>img {
+    width: 26px;
+  }
 }
 
 @media (min-width: 985px) {
@@ -133,6 +191,19 @@
   .education-card {
     height: 120px;
     width: 90%;
+  }
+
+  .certifications {
+    width: 90%;
+  }
+
+  .certifications>h3 {
+    font-size: 22px;
+  }
+
+  .education-card.certification-card {
+    height: auto;
+    width: 100%;
   }
 
   .education-details>h6 {
