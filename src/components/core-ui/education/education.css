@@ -95,16 +95,34 @@
   border-radius: 50%;
   color: #64748b;
   display: flex;
-  font-family: ui-sans-serif, system-ui, sans-serif;
-  font-size: 20px;
-  font-weight: 400;
+  font-size: 0;
   flex-shrink: 0;
-  height: 30px;
+  height: 24px;
   justify-content: center;
-  line-height: 1;
   margin-left: auto;
+  position: relative;
   transition: background-color 200ms ease-in-out, border-color 200ms ease-in-out, color 200ms ease-in-out, transform 200ms ease-in-out;
-  width: 30px;
+  width: 24px;
+}
+
+.certificate-card-action::before,
+.certificate-card-action::after {
+  background: currentColor;
+  content: "";
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.certificate-card-action::before {
+  height: 1px;
+  width: 8px;
+}
+
+.certificate-card-action::after {
+  height: 8px;
+  width: 1px;
 }
 
 .certification-card:hover .certificate-card-action,

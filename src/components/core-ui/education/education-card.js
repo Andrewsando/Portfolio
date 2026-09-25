@@ -1,6 +1,7 @@
 import { makeStyles } from '@mui/styles';
 import React, { useContext } from 'react';
 import Fade from 'react-reveal/Fade';
+import certificateIcon from '../../../assets/svg/education/certificate.svg';
 import eduImgBlack from '../../../assets/svg/education/eduImgBlack.svg';
 import { ThemeContext } from '../../../contexts/theme-context';
 import './education.css';
@@ -31,7 +32,7 @@ function EducationCard({ institution, course, startYear, endYear, compact = fals
                 })}
             >
                 <div className="educard-img" style={{ backgroundColor: theme.secondary }}>
-                    <img src={eduImgBlack} alt="" />
+                    <img src={compact ? certificateIcon : eduImgBlack} alt="" />
                 </div>
                 <div className="education-details">
                     <h6 style={{ color: theme.septenary }}>{dateRange}</h6>
