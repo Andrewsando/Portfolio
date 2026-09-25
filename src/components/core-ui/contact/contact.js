@@ -8,7 +8,7 @@ export default function ContactUI() {
     return (
         <div>
             <h1 className='contactTitle'>Contact</h1>
-            <div className='container'>
+            <div className='contactContent'>
                 <p className='inTouchText'>If you'd like to get in touch, you can reach me using the following methods.</p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-20">
                 <div>

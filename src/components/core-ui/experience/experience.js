@@ -13,7 +13,7 @@ function Experience() {
             <Container className="experience">
                 <div className="experience-body">
                     <div className="experience-description">
-                        <h1 style={{ color: theme.primary }}>Experience</h1>
+                        <h2 style={{ color: theme.primary }}>Experience</h2>
                         {experienceData.map(exp => (
                             <ExperienceCard
                                 key={exp.id}

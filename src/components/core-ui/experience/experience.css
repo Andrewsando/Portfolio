@@ -14,7 +14,7 @@
   align-items: center;
 }
 
-.experience-description>h1 {
+.experience-description>h2 {
   font-size: 2rem;
   font-family: var(--primaryFont);
   margin-bottom: 2rem;
@@ -219,7 +219,7 @@
     margin: auto;
   }
 
-  .experience-description>h1 {
+  .experience-description>h2 {
     font-size: 32px;
   }
 
@@ -267,7 +267,7 @@
   .experience-entry {
     width: 90%;
   }
-  .experience-description>h1 {
+  .experience-description>h2 {
     font-size: 40px;
     font-family: var(--primaryFont);
     margin-bottom: 2rem;
