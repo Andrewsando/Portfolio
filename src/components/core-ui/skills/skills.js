@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { ThemeContext } from '../../../contexts/theme-context';
 import { skillsData } from '../../../data/skillsData';
 import { skillsImage } from '../../../utils/skillsImage';
+import RevealOnScroll from '../../helper/reveal-on-scroll';
 import './skills.css';
 
 function Skills() {
@@ -12,7 +13,7 @@ function Skills() {
             <div className="skillsHeader">
                 <h2 style={{ color: theme.primary }}>Skills</h2>
             </div>
-            <div className="skillsContainer">
+            <RevealOnScroll className="skillsContainer">
                 <div className="skillsGrid">
                     {skillsData.map(({ category, skills }) => (
                         <section className="skillCategory" key={category}>
@@ -45,7 +46,7 @@ function Skills() {
                         </section>
                     ))}
                 </div>
-            </div>
+            </RevealOnScroll>
         </div>
     )
 }

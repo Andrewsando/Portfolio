@@ -2,6 +2,7 @@ import React, { useCallback, useContext, useEffect, useRef, useState } from "rea
 import { createPortal } from "react-dom";
 import { projectsData } from "../../../data/projectsData"
 import { ThemeContext } from '../../../contexts/theme-context';
+import RevealOnScroll from '../../helper/reveal-on-scroll';
 import './projects-ui.css'
 
 function ProjectsUI() {
@@ -70,7 +71,7 @@ function ProjectsUI() {
         <div className="projectsSection">
             <div>
                 <h2 className="projectSectionTitle" style={{ color: theme.primary }}>Projects</h2>
-                <div className="projectsContainer">
+                <RevealOnScroll className="projectsContainer">
                     {projectsData.map((project) => {
                         const { id, projectName, description, link, image } = project
 
@@ -100,7 +101,7 @@ function ProjectsUI() {
                             </article>
                         )
                     })}
-                </div>
+                </RevealOnScroll>
             </div>
             {selectedProject && createPortal(
                 <div
