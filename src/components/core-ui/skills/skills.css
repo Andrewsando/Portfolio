@@ -39,13 +39,12 @@
 }
 
 .skillCategory>h3 {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: .06em;
+  font-family: var(--primaryFont);
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -.01em;
   line-height: 1.4;
   margin-bottom: 16px;
-  text-transform: uppercase;
 }
 
 .skillList {
