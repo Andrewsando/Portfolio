@@ -5,7 +5,7 @@ import eduImgBlack from '../../../assets/svg/education/eduImgBlack.svg';
 import { ThemeContext } from '../../../contexts/theme-context';
 import './education.css';
 
-function EducationCard({ institution, course, startYear, endYear, compact = false }) {
+function EducationCard({ institution, course, startYear, endYear, compact = false, onClick }) {
 
     const { theme } = useContext(ThemeContext);
 
@@ -17,10 +17,19 @@ function EducationCard({ institution, course, startYear, endYear, compact = fals
 
     const classes = useStyles();
     const dateRange = startYear === endYear ? startYear : `${startYear}-${endYear}`;
+    const CardElement = onClick ? 'button' : 'div';
 
     return (
         <Fade bottom>
-            <div className={`education-card${compact ? ' certification-card' : ''} ${classes.educationCard}`} >
+            <CardElement
+                className={`education-card${compact ? ' certification-card' : ''} ${classes.educationCard}`}
+                {...(onClick && {
+                    type: 'button',
+                    onClick,
+                    'aria-haspopup': 'dialog',
+                    'aria-label': `View ${course} certificate from ${institution}`
+                })}
+            >
                 <div className="educard-img" style={{ backgroundColor: theme.secondary }}>
                     <img src={eduImgBlack} alt="" />
                 </div>
@@ -29,7 +38,8 @@ function EducationCard({ institution, course, startYear, endYear, compact = fals
                     <h4 style={{ color: theme.septenary }}>{course}</h4>
                     <h5 style={{ color: theme.primary }}>{institution}</h5>
                 </div>
-            </div>
+                {onClick && <span className="certificate-card-action" aria-hidden="true">View →</span>}
+            </CardElement>
         </Fade>
     )
 }
