@@ -10,7 +10,7 @@ export default function ContactUI() {
             <h1 className='contactTitle'>Contact</h1>
             <div className='contactContent'>
                 <p className='inTouchText'>If you'd like to get in touch, you can reach me using the following methods.</p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-20">
+                <div className="contactMethods grid grid-cols-1 md:grid-cols-2 gap-4 mb-20">
                 <div>
                     <a href="mailto:andres.torressandoval@hotmail.com">
                     <h2>Email</h2>
