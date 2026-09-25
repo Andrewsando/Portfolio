@@ -33,7 +33,7 @@ export const certificationData = [
     {
         id: 2,
         institution: 'SoyHenry',
-        course: 'Fullstack web development',
+        course: 'Web development',
         startYear: '2023',
         endYear: '2023',
         preview: soyHenryCertificate,
@@ -43,7 +43,7 @@ export const certificationData = [
     {
         id: 3,
         institution: 'Coderhouse',
-        course: 'Fullstack web development',
+        course: 'Web development',
         startYear: '2022',
         endYear: '2022',
         preview: coderhouseCertificate,
