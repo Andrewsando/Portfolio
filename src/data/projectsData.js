@@ -1,6 +1,6 @@
 import ambvalent from '../../src/assets/webp/ambvalent.webp'
 import nestifine from '../../src/assets/webp/nestifine.webp'
-import spootchat from '../../src/assets/webp/spootchat.webp'
+import musubii from '../../src/assets/webp/musubii.webp'
 import gaming from '../../src/assets/webp/gaming.webp'
 
 
@@ -27,12 +27,12 @@ export const projectsData = [
     },
     {
         id: 3,
-        projectName: 'Spootchat',
-        description: 'Platform to listen to music online with the possibility of chatting with artists or others interested in music',
-        details: 'Combines music discovery with real-time social interaction so listeners can connect around artists and shared interests.',
-        tags: ['React', 'Vue', 'Firebase', 'Vercel'],
-        link: "https://spoot-chat-client.vercel.app/",
-        image: spootchat,
+        projectName: 'Musubii',
+        description: 'Online store for women’s clothing and accessories inspired by anime and Japanese culture',
+        details: 'A responsive e-commerce experience with themed collections, product discovery, favorites, search, shopping cart, and nationwide delivery in Colombia.',
+        tags: ['Next.js', 'E-commerce', 'Responsive design', 'Product catalog'],
+        link: "https://dev.musubii.com.co/",
+        image: musubii,
 
     },
     {
