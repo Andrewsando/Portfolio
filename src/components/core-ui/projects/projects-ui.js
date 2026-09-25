@@ -95,18 +95,26 @@ function ProjectsUI() {
                         >
                             ×
                         </button>
-                        <img
-                            src={selectedProject.image}
-                            alt={`${selectedProject.projectName} website preview`}
-                            className="projectModalImage"
-                        />
+                        <video
+                            key={selectedProject.id}
+                            className="projectModalMedia"
+                            autoPlay
+                            muted
+                            loop
+                            playsInline
+                            preload="metadata"
+                            poster={selectedProject.image}
+                            aria-label={`${selectedProject.projectName} website interaction preview`}
+                        >
+                            <source src={selectedProject.video} type="video/webm" />
+                        </video>
                         <div className="projectModalContent">
-                            <p className="projectModalEyebrow">Selected project</p>
                             <h3 id="project-modal-title">{selectedProject.projectName}</h3>
                             <p>{selectedProject.description}</p>
                             <p className="projectModalDetails">{selectedProject.details}</p>
-                            <ul aria-label={`${selectedProject.projectName} highlights`}>
-                                {selectedProject.tags.map((tag) => <li key={tag}>{tag}</li>)}
+                            <p className="projectModalStackTitle">Stack used</p>
+                            <ul aria-label={`${selectedProject.projectName} technology stack`}>
+                                {selectedProject.stack.map((technology) => <li key={technology}>{technology}</li>)}
                             </ul>
                             <a href={selectedProject.link} target="_blank" rel="noopener noreferrer">
                                 Visit project <span aria-hidden="true">↗</span>

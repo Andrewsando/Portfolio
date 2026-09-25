@@ -101,7 +101,7 @@
 
 .projectModalBackdrop {
     align-items: center;
-    animation: project-modal-fade 240ms ease-out both;
+    animation: project-modal-fade 420ms ease-out both;
     backdrop-filter: blur(8px);
     background: rgba(15, 23, 42, .46);
     display: flex;
@@ -113,7 +113,7 @@
 }
 
 .projectModal {
-    animation: project-modal-rise 380ms cubic-bezier(.16, 1, .3, 1) both;
+    animation: project-modal-rise 620ms cubic-bezier(.22, 1, .36, 1) both;
     background: #f8fafc;
     border: 1px solid rgba(255, 255, 255, .82);
     border-radius: 24px;
@@ -122,6 +122,8 @@
     max-width: 760px;
     overflow: auto;
     position: relative;
+    transform-origin: center 40%;
+    will-change: opacity, transform;
     width: 100%;
 }
 
@@ -158,7 +160,7 @@
     outline-offset: 2px;
 }
 
-.projectModalImage {
+.projectModalMedia {
     aspect-ratio: 16 / 9;
     border-radius: 23px 23px 0 0;
     display: block;
@@ -170,15 +172,6 @@
     padding: clamp(22px, 4vw, 36px);
 }
 
-.projectModalEyebrow {
-    color: #6366a8;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: .14em;
-    margin-bottom: 8px;
-    text-transform: uppercase;
-}
-
 .projectModalContent h3 {
     color: #1e293b;
     font-size: clamp(25px, 4vw, 34px);
@@ -187,7 +180,7 @@
     margin-bottom: 12px;
 }
 
-.projectModalContent>p:not(.projectModalEyebrow) {
+.projectModalContent>p {
     color: #64748b;
     font-size: 15px;
     line-height: 1.6;
@@ -198,12 +191,21 @@
     margin-top: 10px;
 }
 
+.projectModalContent .projectModalStackTitle {
+    color: #6366a8;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .14em;
+    margin-top: 22px;
+    text-transform: uppercase;
+}
+
 .projectModalContent ul {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
     list-style: none;
-    margin-top: 20px;
+    margin-top: 10px;
     padding: 0;
 }
 
@@ -246,7 +248,7 @@
 @keyframes project-modal-rise {
     from {
         opacity: 0;
-        transform: translateY(18px) scale(.98);
+        transform: translateY(24px) scale(.975);
     }
     to {
         opacity: 1;
