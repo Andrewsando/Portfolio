@@ -136,19 +136,22 @@
     cursor: pointer;
     display: flex;
     font-family: inherit;
-    font-size: 25px;
-    height: 42px;
+    font-size: 21px;
+    height: 34px;
     justify-content: center;
     line-height: 1;
     padding: 0 0 3px;
     position: absolute;
-    right: 14px;
-    top: 14px;
-    width: 42px;
+    right: 12px;
+    top: 12px;
+    width: 34px;
     z-index: 1;
 }
 
-.projectModalClose:hover,
+.projectModalClose:hover {
+    background: #fff;
+}
+
 .projectModalClose:focus-visible {
     background: #fff;
     outline: 2px solid #64748b;
