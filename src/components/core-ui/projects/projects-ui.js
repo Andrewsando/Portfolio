@@ -31,6 +31,12 @@ function ProjectsUI() {
         if (!selectedProject) return undefined;
 
         const previousOverflow = document.body.style.overflow;
+        const previousPaddingRight = document.body.style.paddingRight;
+        const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+        const bodyPaddingRight = parseFloat(window.getComputedStyle(document.body).paddingRight) || 0;
+        if (scrollbarWidth > 0) {
+            document.body.style.paddingRight = `${bodyPaddingRight + scrollbarWidth}px`;
+        }
         document.body.style.overflow = 'hidden';
         closeButtonRef.current?.focus();
 
@@ -44,6 +50,7 @@ function ProjectsUI() {
 
         return () => {
             document.body.style.overflow = previousOverflow;
+            document.body.style.paddingRight = previousPaddingRight;
             window.removeEventListener('keydown', handleKeyDown);
             triggerRef.current?.focus();
         };
