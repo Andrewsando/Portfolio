@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React, { useCallback, useContext, useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { projectsData } from "../../../data/projectsData"
 import { ThemeContext } from '../../../contexts/theme-context';
@@ -7,8 +7,25 @@ import './projects-ui.css'
 function ProjectsUI() {
     const { theme } = useContext(ThemeContext);
     const [selectedProject, setSelectedProject] = useState(null);
+    const [isClosing, setIsClosing] = useState(false);
     const closeButtonRef = useRef(null);
+    const closeTimerRef = useRef(null);
+    const isClosingRef = useRef(false);
     const triggerRef = useRef(null);
+
+    const closeProject = useCallback(() => {
+        if (isClosingRef.current) return;
+
+        isClosingRef.current = true;
+        setIsClosing(true);
+
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        closeTimerRef.current = window.setTimeout(() => {
+            setSelectedProject(null);
+            setIsClosing(false);
+            isClosingRef.current = false;
+        }, prefersReducedMotion ? 0 : 360);
+    }, []);
 
     useEffect(() => {
         if (!selectedProject) return undefined;
@@ -19,7 +36,7 @@ function ProjectsUI() {
 
         const handleKeyDown = (event) => {
             if (event.key === 'Escape') {
-                setSelectedProject(null);
+                closeProject();
             }
         };
 
@@ -30,9 +47,14 @@ function ProjectsUI() {
             window.removeEventListener('keydown', handleKeyDown);
             triggerRef.current?.focus();
         };
-    }, [selectedProject]);
+    }, [closeProject, selectedProject]);
+
+    useEffect(() => () => window.clearTimeout(closeTimerRef.current), []);
 
     const openProject = (project, event) => {
+        window.clearTimeout(closeTimerRef.current);
+        isClosingRef.current = false;
+        setIsClosing(false);
         triggerRef.current = event.currentTarget;
         setSelectedProject(project);
     };
@@ -75,13 +97,13 @@ function ProjectsUI() {
             </div>
             {selectedProject && createPortal(
                 <div
-                    className="projectModalBackdrop"
+                    className={`projectModalBackdrop${isClosing ? ' projectModalBackdrop--closing' : ''}`}
                     onMouseDown={(event) => {
-                        if (event.target === event.currentTarget) setSelectedProject(null);
+                        if (event.target === event.currentTarget) closeProject();
                     }}
                 >
                     <section
-                        className="projectModal"
+                        className={`projectModal${isClosing ? ' projectModal--closing' : ''}`}
                         role="dialog"
                         aria-modal="true"
                         aria-labelledby="project-modal-title"
@@ -91,7 +113,7 @@ function ProjectsUI() {
                             type="button"
                             className="projectModalClose"
                             aria-label="Close project details"
-                            onClick={() => setSelectedProject(null)}
+                            onClick={closeProject}
                         >
                             ×
                         </button>

@@ -112,6 +112,11 @@
     z-index: 2000;
 }
 
+.projectModalBackdrop--closing {
+    animation: project-modal-fade-out 360ms ease-in both;
+    pointer-events: none;
+}
+
 .projectModal {
     animation: project-modal-rise 620ms cubic-bezier(.22, 1, .36, 1) both;
     background: #f8fafc;
@@ -125,6 +130,10 @@
     transform-origin: center 40%;
     will-change: opacity, transform;
     width: 100%;
+}
+
+.projectModal--closing {
+    animation: project-modal-dismiss 360ms cubic-bezier(.4, 0, 1, 1) both;
 }
 
 .projectModalClose {
@@ -252,6 +261,11 @@
     to { opacity: 1; }
 }
 
+@keyframes project-modal-fade-out {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
 @keyframes project-modal-rise {
     from {
         opacity: 0;
@@ -260,6 +274,17 @@
     to {
         opacity: 1;
         transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes project-modal-dismiss {
+    from {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(14px) scale(.985);
     }
 }
 
