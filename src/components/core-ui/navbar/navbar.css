@@ -207,6 +207,7 @@ html {
     opacity: 1;
     overflow: visible;
     padding: 6px 16px;
+    transform: none;
     visibility: visible;
     white-space: nowrap;
     width: auto;
