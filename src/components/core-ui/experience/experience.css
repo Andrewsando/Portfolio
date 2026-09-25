@@ -14,7 +14,7 @@
   align-items: center;
 }
 
-.experience-description>h1 {
+.experience-description>h2 {
   font-size: 2rem;
   font-family: var(--primaryFont);
   margin-bottom: 2rem;
@@ -22,22 +22,47 @@
   z-index: 10;
 }
 
+.experience-entry {
+  background-color: #F1F5F9;
+  border-radius: 20px;
+  margin-bottom: 1.5rem;
+  transition: 400ms ease-in-out;
+  width: 100%;
+}
+
+.experience-entry:hover {
+  background-color: rgba(226, 232, 240, .7);
+  transform: scale(1.02);
+}
+
 .experience-card {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  border-radius: 20px;
+  color: inherit;
+  cursor: pointer;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   width: 100%;
-  height: 100px;
-  padding: 1.5rem;
-  border-radius: 20px;
-  margin-bottom: 1.5rem;
-  transition: background-color 200ms ease-in-out;
-  place-items: center;
+  min-height: 100px;
+  padding: 1rem;
+  text-align: left;
+  transition: 400ms ease-in-out;
 }
 
-.experience-card:hover{
-  transition: 300ms ease-in-out;
+.experience-entry:hover .experience-card {
   background-color: rgba(226, 232, 240, .7);
+}
+
+.experience-entry.expanded {
+  background-color: rgba(226, 232, 240, .7);
+}
+
+.experience-card:focus-visible {
+  outline: 2px solid #64748b;
+  outline-offset: -4px;
 }
 
 .expcard-img {
@@ -56,19 +81,109 @@
 }
 
 .experience-details {
+  flex: 1;
   margin-left: 0.6rem;
+  min-width: 0;
 }
 
 .experience-details>h4 {
   font-family: var(--primaryFont);
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
+  line-height: 1.45;
 }
 
-.experience-details>h5 {
+.experience-meta {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .25rem .75rem;
+}
+
+.experience-meta>h5,
+.experience-meta>span {
   font-family: var(--primaryFont);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 400;
+  line-height: 1.5;
+}
+
+.experience-chevron {
+  align-items: center;
+  color: #64748b;
+  display: flex;
+  flex-shrink: 0;
+  font-size: 20px;
+  justify-content: center;
+  margin-left: .75rem;
+  transition: transform 200ms ease-in-out;
+}
+
+.experience-chevron svg {
+  display: block;
+  height: 1em;
+  width: 1em;
+}
+
+.experience-chevron.expanded {
+  transform: rotate(180deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .experience-entry,
+  .experience-card,
+  .experience-achievements,
+  .experience-achievements-content,
+  .experience-chevron {
+    transition: none;
+  }
+
+  .experience-entry:hover {
+    transform: none;
+  }
+}
+
+.experience-achievements {
+  border-top: 1px solid transparent;
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition: grid-template-rows 300ms ease-in-out,
+    opacity 200ms ease-in-out,
+    border-color 300ms ease-in-out;
+}
+
+.experience-achievements.expanded {
+  border-top-color: #cbd5e1;
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+.experience-achievements-content {
+  min-height: 0;
+  overflow: hidden;
+  padding: 0 1.5rem;
+  transition: padding 300ms ease-in-out;
+}
+
+.experience-achievements.expanded .experience-achievements-content {
+  padding-bottom: 1.5rem;
+  padding-top: 1.25rem;
+}
+
+.experience-achievements ul {
+  display: grid;
+  gap: .75rem;
+  list-style: disc;
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.experience-achievements li {
+  color: #475569;
+  font-family: var(--primaryFont);
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 .experience-image {
@@ -104,12 +219,31 @@
     margin: auto;
   }
 
-  .experience-description>h1 {
+  .experience-description>h2 {
     font-size: 32px;
   }
 
   .experience-card {
-    height: 80px;
+    min-height: 100px;
+    padding: 1.5rem;
+  }
+
+  .experience-achievements-content {
+    padding-left: 5rem;
+  }
+
+  .experience-chevron {
+    font-size: 22px;
+  }
+
+  .experience-details>h4 {
+    font-size: 15px;
+    line-height: 1.45;
+  }
+
+  .experience-meta>h5,
+  .experience-meta>span {
+    font-size: 13px;
   }
 
   .expcard-img {
@@ -127,20 +261,35 @@
     padding: 0 24px !important;
   }
   .experience-card {
-    width: 90%;
-    height: 140px;
+    width: 100%;
+    min-height: 120px;
   }
-  .experience-description>h1 {
+  .experience-entry {
+    width: 90%;
+  }
+  .experience-description>h2 {
     font-size: 40px;
     font-family: var(--primaryFont);
     margin-bottom: 2rem;
     align-self: flex-start;
   }
   .experience-details>h4 {
-    font-size: 20px;
+    font-size: 18px;
+    line-height: 1.4;
   }
   
-  .experience-details>h5 {
-    font-size: 18px;
+  .experience-meta>h5,
+  .experience-meta>span {
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  .experience-achievements-content {
+    padding-left: 7rem;
+  }
+
+  .experience-achievements li {
+    font-size: 15px;
+    line-height: 1.65;
   }
 }

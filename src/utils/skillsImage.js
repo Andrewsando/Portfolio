@@ -1,4 +1,5 @@
 import adobeXd from '../assets/svg/skills/adobe-xd.svg'
+import adobeExperienceManager from '../assets/svg/skills/adobe-experience-manager.svg'
 import adobeaudition from '../assets/svg/skills/adobeaudition.svg'
 import afterEffects from '../assets/svg/skills/after-effects.svg'
 import angular from '../assets/svg/skills/angular.svg'
@@ -91,6 +92,8 @@ export const skillsImage = (skill) => {
             return illustrator;
         case 'adobe xd':
             return adobeXd;
+        case 'aem':
+            return adobeExperienceManager;
         case 'after effects':
             return afterEffects;
         case 'css':

@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import Marquee from "react-fast-marquee";
 import { ThemeContext } from '../../../contexts/theme-context';
 import { skillsData } from '../../../data/skillsData';
 import { skillsImage } from '../../../utils/skillsImage';
@@ -8,35 +7,43 @@ import './skills.css';
 function Skills() {
     const { theme } = useContext(ThemeContext);
 
-    const skillBoxStyle = {
-        backgroundColor: theme.quaternary
-    }
-
     return (
-        <div className="skills" id="skills" style={{ backgroundColor: theme.secondary }}>
+        <div className="skills">
             <div className="skillsHeader">
                 <h2 style={{ color: theme.primary }}>Skills</h2>
             </div>
             <div className="skillsContainer">
-                <div className="skill--scroll">
-                    <Marquee
-                        gradient={false}
-                        speed={80}
-                        pauseOnHover={true}
-                        pauseOnClick={true}
-                        delay={0}
-                        play={true}
-                        direction="left"
-                    >
-                        {skillsData.map((skill, id) => (
-                            <div className="skill--box" key={id} style={skillBoxStyle}>
-                                <img src={skillsImage(skill)} alt={skill} />
-                                <h3 style={{ color: theme.primary }}>
-                                    {skill}
-                                </h3>
+                <div className="skillsGrid">
+                    {skillsData.map(({ category, skills }) => (
+                        <section className="skillCategory" key={category}>
+                            <h3 style={{ color: theme.septenary }}>{category}</h3>
+                            <div className="skillList">
+                                {skills.map((skill) => {
+                                    const icon = skillsImage(skill);
+
+                                    return (
+                                        <div className="skill--box" key={skill}>
+                                            <span className="skillIcon" aria-hidden="true">
+                                                {icon ? (
+                                                    <img
+                                                        src={icon}
+                                                        alt=""
+                                                        loading="lazy"
+                                                        decoding="async"
+                                                    />
+                                                ) : (
+                                                    <span className="skillIconFallback">{skill}</span>
+                                                )}
+                                            </span>
+                                            <span style={{ color: theme.primary }}>
+                                                {skill}
+                                            </span>
+                                        </div>
+                                    )
+                                })}
                             </div>
-                        ))}
-                    </Marquee>
+                        </section>
+                    ))}
                 </div>
             </div>
         </div>

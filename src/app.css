@@ -763,12 +763,8 @@ video {
 
 @font-face {
   font-family: "saans-font";
-
-  src: url("./assets/fonts/saans-font/saans-font.woff2");
-
-  src: url("./assets/fonts/saans-font/saans-font.woff2")
-      format("embedded-opentype"),
-    url("./assets/fonts/saans-font/saans-font.woff2") format("truetype");
+  src: url("./assets/fonts/saans-font/saans-font.woff2") format("woff2");
+  font-display: swap;
 }
 
 * {

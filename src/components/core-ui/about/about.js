@@ -9,11 +9,11 @@ function About() {
 
     const { theme } = useContext(ThemeContext);
     return (
-        <div id="about">
+        <div>
             <Container className="about" >
                 <div className="about-body">
                     <div className="about-description">
-                        <h2 id="about" style={{ color: theme.primary }}>{aboutData.title}</h2>
+                        <h2 style={{ color: theme.primary }}>{aboutData.title}</h2>
                         <p style={{ color: theme.septenary }}>{aboutData.description1}</p>
                         <Link to="/resume" className="resumeLink">See resume <span className='aboutArrow'>→</span></Link>
                         <Link to="/contact" className="resumeLink">Contact <span className='aboutArrow'>→</span></Link>

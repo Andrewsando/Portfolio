@@ -1,4 +1,4 @@
 export const aboutData = {
     title: "About",
-    description1: "I am a business management professional and passionate Fullstack web developer. Quick to learn and self-driven, I love exploring new technologies and have a deep enthusiasm for all aspects of Software Engineering.",
+    description1: "Frontend Developer with a background in business management, focused on building accessible, high-performing digital products. I combine clean technical execution with product thinking to turn complex requirements into scalable experiences that create value for users and organizations.",
 }

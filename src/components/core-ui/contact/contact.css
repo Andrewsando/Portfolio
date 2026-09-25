@@ -4,7 +4,7 @@
     padding-top: 3rem;
  }
 
-.container{
+.contactContent{
     font-family: var(--primaryFont);
     max-width: 985px;
     margin-top: 0;
@@ -20,26 +20,26 @@
     font-size: 32px;
 }
 
-.container p {
+.contactContent p {
     font-size: 16px;
     color: #334155;
     margin-bottom: 20px;
 }
 
-.container h2 {
+.contactContent h2 {
     font-size: 20px;
     color: #334155;
     font-weight: 600;
     margin-bottom: 5px;
 }
 
-.container .inTouchText{
+.contactContent .inTouchText{
     font-size: 1.125rem;
     line-height: 1.75rem;
     margin-bottom: 30px;
 }
 
-.container a{
+.contactContent a{
     cursor: pointer;
 }
 

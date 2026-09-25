@@ -7,6 +7,7 @@ import ScrollToTop from './components/helper/scroll-to-top';
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import './app.css';
+import './app-shell.css';
 import RedirectToSection from './utils/redirectToSection';
 
 
@@ -14,7 +15,7 @@ function App() {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <div style={{ backgroundColor: theme.secondary, height: '100%', minHeight: '100vh' }}>
+    <div className="appShell" style={{ backgroundColor: theme.secondary, height: '100%', minHeight: '100vh' }}>
       
       <Router>
         <ScrollToTop />

@@ -11,11 +11,9 @@ import Footer from '../../components/core-ui/footer/footer';
 
 function HomePage() {
   return (
-    <div>
+    <div id="top">
       <Helmet>
-        <title>Andrés Torres - Portfolio</title>
-        <link href="./output.css" rel="stylesheet"/>
-
+        <title>Andrés Torres | Frontend Developer</title>
       </Helmet>
       <div className='relative flex h-full flex-col'>
         <div className="relative isolate mb-24  w-full">
@@ -57,8 +55,8 @@ function HomePage() {
       <section id="education">
         <Education />
       </section>
-      <div class="w-9/10 justify-self-center">
-      <Footer contact={"Contact"} resume={"Resume"}/>
+      <div className="footerWrapper">
+        <Footer contact={"Contact"} resume={"Resume"}/>
       </div>
     </div>
   );

@@ -1,25 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@100;300;400;500;600;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet');
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,200;1,300;1,400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700&display=swap");
 @font-face {
   font-family: "saans-font";
-  src: url("./assets/fonts/saans-font/saans-font.woff2");
-  src: url("./assets/fonts/saans-font/saans-font.woff2")
-      format("embedded-opentype"),
-    url("./assets/fonts/saans-font/saans-font.woff2") format("truetype");
+  src: url("./assets/fonts/saans-font/saans-font.woff2") format("woff2");
+  font-display: swap;
 }
 
 * {
   margin: 0;
   box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  overscroll-behavior-y: none;
+}
+
+html {
+  background-color: #f8fafc;
+}
+
+body,
+#root {
+  overflow-x: clip;
+  overflow-y: visible;
 }
 
 a {
@@ -54,13 +61,13 @@ img {
 
 @media screen and (max-width: 400px) {
   body {
-    overflow-x: hidden;
+    overflow-x: clip;
   }
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {
   body {
-    overflow-x: hidden;
+    overflow-x: clip;
   }
 }
 
