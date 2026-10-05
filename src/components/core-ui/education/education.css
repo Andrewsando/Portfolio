@@ -336,18 +336,23 @@
 }
 
 .certificateModalPreview {
+  align-items: center;
   background: #e2e8f0;
   border-top: 1px solid #cbd5e1;
+  display: flex;
+  flex: 0 1 auto;
+  justify-content: center;
   min-height: 0;
-  overflow: auto;
-  padding: clamp(10px, 2vw, 18px);
+  overflow: hidden;
+  padding: clamp(8px, 1.5vw, 14px);
 }
 
 .certificateModalPreview img {
   display: block;
   height: auto;
-  margin: 0 auto;
   max-width: 100%;
+  max-height: min(72vh, calc(100vh - 280px));
+  object-fit: contain;
   width: auto;
 }
 
