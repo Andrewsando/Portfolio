@@ -4,12 +4,14 @@
 }
 
 .resumeTitle {
+    box-sizing: border-box;
     font-family: var(--primaryFont);
     padding-top: 50px;
     padding-bottom: 20px;
-    justify-self: center;
     color: #64748B;
     font-size: 32px;
+    text-align: center;
+    width: 100%;
 }
 
 .resumeLanguage {
