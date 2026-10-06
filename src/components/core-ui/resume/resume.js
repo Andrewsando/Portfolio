@@ -27,7 +27,7 @@ export default function ResumeUI() {
                     aria-pressed={language === 'en'}
                     onClick={() => setLanguage('en')}
                 >
-                    EN <span>English</span>
+                    <span>English</span>
                 </button>
                 <button
                     type="button"
@@ -35,7 +35,7 @@ export default function ResumeUI() {
                     aria-pressed={language === 'es'}
                     onClick={() => setLanguage('es')}
                 >
-                    ES <span>Español</span>
+                    <span>Español</span>
                 </button>
             </div>
             <img
